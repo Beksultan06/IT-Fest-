@@ -12,4 +12,3 @@
 			</apis>
 	</service>
 </rsd>
-	

@@ -143,6 +143,14 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.example.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'nurlanuuulubeksultan@gmail.com'
+EMAIL_HOST_PASSWORD = 'ytlhynvmpifetqdk'
+
+
 # redis
 REDIS_PORT = 6379
 REDIS_HOST = 'localhost'  # Используйте localhost вместо redis
