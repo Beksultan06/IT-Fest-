@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "flaticon_valet_park";
+    src: url("./flaticon_valet_park.ttf?8018d8448caae0ff2f93c75d0b0a88fa") format("truetype"),
+url("./flaticon_valet_park.woff?8018d8448caae0ff2f93c75d0b0a88fa") format("woff"),
+url("./flaticon_valet_park.woff2?8018d8448caae0ff2f93c75d0b0a88fa") format("woff2"),
+url("./flaticon_valet_park.eot?8018d8448caae0ff2f93c75d0b0a88fa#iefix") format("embedded-opentype"),
+url("./flaticon_valet_park.svg?8018d8448caae0ff2f93c75d0b0a88fa#flaticon_valet_park") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_valet_park !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-doorman:before {
+    content: "\f101";
+}
+.flaticon-sensor:before {
+    content: "\f102";
+}
+.flaticon-parking:before {
+    content: "\f103";
+}
+.flaticon-tools:before {
+    content: "\f104";
+}
+.flaticon-report:before {
+    content: "\f105";
+}
+.flaticon-group:before {
+    content: "\f106";
+}
+.flaticon-valet:before {
+    content: "\f107";
+}
+.flaticon-car-parking:before {
+    content: "\f108";
+}
+.flaticon-keys:before {
+    content: "\f109";
+}
+.flaticon-insurance:before {
+    content: "\f10a";
+}
+.flaticon-bellboy:before {
+    content: "\f10b";
+}
+.flaticon-valet-parking:before {
+    content: "\f10c";
+}
+.flaticon-car-parking-1:before {
+    content: "\f10d";
+}
+.flaticon-pin:before {
+    content: "\f10e";
+}
+.flaticon-telephone-call:before {
+    content: "\f10f";
+}
+.flaticon-new-email:before {
+    content: "\f110";
+}
+.flaticon-paper-plane:before {
+    content: "\f111";
+}
+.flaticon-analytics:before {
+    content: "\f112";
+}
+.flaticon-stats:before {
+    content: "\f113";
+}
+.flaticon-credit-cards:before {
+    content: "\f114";
+}
+.flaticon-payment:before {
+    content: "\f115";
+}
+.flaticon-money:before {
+    content: "\f116";
+}
+.flaticon-close:before {
+    content: "\f117";
+}
+.flaticon-shopping-bag:before {
+    content: "\f118";
+}
+.flaticon-right-arrow:before {
+    content: "\f119";
+}
+.flaticon-down-arrow:before {
+    content: "\f11a";
+}
+.flaticon-checked:before {
+    content: "\f11b";
+}
+.flaticon-palm-islands:before {
+    content: "\f11c";
+}
+.flaticon-toronto:before {
+    content: "\f11d";
+}
+.flaticon-london-eye:before {
+    content: "\f11e";
+}
+.flaticon-parking-1:before {
+    content: "\f11f";
+}
+.flaticon-parked-car:before {
+    content: "\f120";
+}

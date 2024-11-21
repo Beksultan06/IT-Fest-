@@ -1,0 +1,136 @@
+.elementor-1172 .elementor-element.elementor-element-4872dbe {
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-a82d307>.elementor-element-populated {
+    margin: -235px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-b681d60 .prt-heading-subheading {
+    text-align: left;
+}
+
+.elementor-1172 .elementor-element.elementor-element-b681d60 .prt-element-content-heading {
+    margin-bottom: 20px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-8509278 {
+    padding: 50px 0px 0px 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-e121020 .prt-heading-subheading {
+    text-align: left;
+}
+
+.elementor-1172 .elementor-element.elementor-element-9c7967d {
+    padding: 30px 0px 50px 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-0183b41>.elementor-element-populated {
+    padding: 10px 0px 0px 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+    padding-bottom: calc(18px/2);
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+    margin-top: calc(18px/2);
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+    margin-right: calc(18px/2);
+    margin-left: calc(18px/2);
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-items.elementor-inline-items {
+    margin-right: calc(-18px/2);
+    margin-left: calc(-18px/2);
+}
+
+body.rtl .elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+    left: calc(-18px/2);
+}
+
+body:not(.rtl) .elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+    right: calc(-18px/2);
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-icon i {
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-icon svg {
+    fill: #000000;
+    transition: fill 0.3s;
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 {
+    --e-icon-list-icon-size: 14px;
+    --icon-vertical-offset: 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-2778584 .elementor-icon-list-text {
+    transition: color 0.3s;
+}
+
+.elementor-1172 .elementor-element.elementor-element-729bdb1 {
+    text-align: right;
+}
+
+.elementor-1172 .elementor-element.elementor-element-5c23a7d {
+    padding: 0px 0px 50px 0px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-95b2768>.elementor-element-populated {
+    padding: 50px 80px 50px 80px;
+}
+
+.elementor-1172 .elementor-element.elementor-element-6ce992c .prt-heading-subheading {
+    text-align: left;
+}
+
+@media(min-width:768px) {
+    .elementor-1172 .elementor-element.elementor-element-a82d307 {
+        width: 56.154%;
+    }
+
+    .elementor-1172 .elementor-element.elementor-element-ac92c6e {
+        width: 43.769%;
+    }
+}
+
+@media(max-width:1024px) {
+    .elementor-1172 .elementor-element.elementor-element-8509278 {
+        padding: 30px 0px 0px 0px;
+    }
+
+    .elementor-1172 .elementor-element.elementor-element-9c7967d {
+        padding: 30px 0px 50px 0px;
+    }
+
+    .elementor-1172 .elementor-element.elementor-element-b994f63>.elementor-element-populated {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .elementor-1172 .elementor-element.elementor-element-729bdb1 {
+        text-align: left;
+    }
+
+    .elementor-1172 .elementor-element.elementor-element-95b2768>.elementor-element-populated {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+@media(max-width:767px) {
+    .elementor-1172 .elementor-element.elementor-element-0183b41>.elementor-element-populated {
+        padding: 0px 0px 30px 0px;
+    }
+
+    .elementor-1172 .elementor-element.elementor-element-95b2768>.elementor-element-populated {
+        padding: 30px 0px 0px 0px;
+    }
+}

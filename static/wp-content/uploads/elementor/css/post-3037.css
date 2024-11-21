@@ -1,0 +1,101 @@
+.elementor-3037 .elementor-element.elementor-element-7847f8d {
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-f8174a0>.elementor-element-populated {
+    padding: 47px 40px 51px 38px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-a757324 .elementor-heading-title {
+    color: #D7FC69;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-656f007 .prt-heading-subheading {
+    text-align: left;
+}
+
+.elementor-3037 .elementor-element.elementor-element-656f007 .prt-element-content-heading {
+    font-size: 34px;
+    line-height: 44px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-656f007>.elementor-widget-container {
+    margin: -7px 0px 0px 0px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-27b62bc .elementor-icon-list-icon i {
+    transition: color 0.3s;
+}
+
+.elementor-3037 .elementor-element.elementor-element-27b62bc .elementor-icon-list-icon svg {
+    transition: fill 0.3s;
+}
+
+.elementor-3037 .elementor-element.elementor-element-27b62bc {
+    --e-icon-list-icon-size: 14px;
+    --icon-vertical-offset: 0px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-27b62bc .elementor-icon-list-text {
+    transition: color 0.3s;
+}
+
+.elementor-3037 .elementor-element.elementor-element-27b62bc>.elementor-widget-container {
+    padding: 20px 0px 10px 0px;
+}
+
+.elementor-3037 .elementor-element.elementor-element-7162566 .elementor-button-content-wrapper {
+    flex-direction: row-reverse;
+}
+
+.elementor-3037 .elementor-element.elementor-element-3a280ed:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-3037 .elementor-element.elementor-element-3a280ed>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-image: url("https://valetex.preyantechnosys.com/wp-content/uploads/2023/01/tab-img-03.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.elementor-3037 .elementor-element.elementor-element-3a280ed>.elementor-element-populated {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+.elementor-3037 .elementor-element.elementor-element-3a280ed>.elementor-element-populated>.elementor-background-overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-3037 .elementor-element.elementor-element-d4463d3 {
+    --spacer-size: 50px;
+}
+
+@media(max-width:1024px) {
+    .elementor-3037 .elementor-element.elementor-element-f8174a0>.elementor-element-populated {
+        padding: 20px 0px 40px 0px;
+    }
+
+    .elementor-3037 .elementor-element.elementor-element-d4463d3 {
+        --spacer-size: 300px;
+    }
+}
+
+@media(min-width:768px) {
+    .elementor-3037 .elementor-element.elementor-element-f8174a0 {
+        width: 43.234%;
+    }
+
+    .elementor-3037 .elementor-element.elementor-element-3a280ed {
+        width: 56.381%;
+    }
+}
+
+@media(max-width:767px) {
+    .elementor-3037 .elementor-element.elementor-element-f8174a0 {
+        width: 100%;
+    }
+
+    .elementor-3037 .elementor-element.elementor-element-3a280ed {
+        width: 100%;
+    }
+}

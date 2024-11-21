@@ -1,0 +1,3124 @@
+/*
+-   Base
+-   Font
+-   Margin
+-	State
+-   Icon
+	-   Icon / Meta
+	-	Icon / Feature
+-   Icon complete
+-   Transition
+-   Main
+-   Label
+-   Qtip
+-   Button
+-   Button checkbox   
+-   Button navigation
+-   Selectmenu
+-   Timepicker
+-   Datepicker
+-	Slick
+-   Preloader 
+-   Layout
+    -   Layout / Layout 50x50
+    -   Layout / Layout 33x33x33
+    -   Layout / Layout 25x75
+    -   Layout / Layout 75x25
+	-   Layout / Layout 50x25x25
+-   Main navigation
+    -	Main navigation / Default
+	-	Main navigation / Responsive
+-	Step 1
+-	Step 2
+-	Step 3
+-	Step 4
+-	Header
+-   Form panel
+-   Disable section  
+-   Form checkbox
+-   Form field 
+-   Place list 
+-   Place 
+    -   Place / Layout
+    -   Place / Image
+    -   Place / Name
+    -   Place / Location name
+    -   Place / Price
+	-	Place / Attribute
+	-	Place / Button
+-   Google Map
+-	Attribute
+-	Summary price element 
+-   Payment
+-   Agreement
+-   Coupon
+-	Rental date box
+-   Client form
+-	Quantity
+-   Booking extra
+-   Booking complete
+-   Location info frame 
+    -   Location info frame / Name
+    -   Location info frame / Place type
+    -   Location info frame / Image
+    -   Location info frame / Description
+	-	Location info frame / Contact detail
+	-	Location info frame / Business hours
+-   Responsive
+	-   Responsive / Button
+    -   Responsive / Layout 
+    -   Responsive / Summary field
+    -   Responsive / Main navigation
+	-	Responsive / Step  
+    -   Responsive / Button navigation 
+	-   Responsive / Place list
+    -   Responsive / Booking extra
+    -   Responsive / Form field
+-   WooCommerce
+-   Bug fixes 
+*/
+
+/******************************************************************************/
+/* Base                                                                       */
+/******************************************************************************/
+
+.cpbs-main *,
+.cpbs-main.ui-datepicker,
+.cpbs-main.ui-datepicker *,
+.cpbs-main .ui-timepicker-wrapper,
+.cpbs-main .ui-timepicker-wrapper *,
+.cpbs-main .ui-selectmenu-button span.ui-selectmenu-text
+{
+    outline:0;
+    line-height:150%;
+    box-sizing:border-box;
+}
+
+.cpbs-main .cpbs-clear-fix:after
+{
+	height:0;
+	clear:both;
+	content:" ";
+	font-size:0;
+	display:block;
+	visibility: hidden;
+}
+
+* html .cpbs-clear-fix
+{
+	zoom:1; 
+} 
+
+.cpbs-main .cpbs-list-reset
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+.cpbs-main .cpbs-align-right
+{
+    text-align:right;
+}
+
+.cpbs-main .cpbs-hidden,
+.cpbs-main.cpbs-hidden
+{
+    display:none !important;
+}
+
+.cpbs-main .ui-timepicker-wrapper
+{
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;  
+}
+
+.cpbs-main.ui-datepicker,
+.cpbs-main .ui-selectmenu-menu,
+.cpbs-main .ui-timepicker-wrapper,
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div,
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-2>.cpbs-layout-25x75 .cpbs-layout-column-left .cpbs-summary-box,
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-3>.cpbs-layout-25x75 .cpbs-layout-column-left .cpbs-summary-box,
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-4>.cpbs-layout-50x50>.cpbs-layout-column-left,
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-4>.cpbs-layout-50x50>.cpbs-layout-column-right
+{
+	webkit-box-shadow: 0px 55px 30px -40px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 55px 30px -40px rgba(0,0,0,0.2);
+	box-shadow: 0px 55px 30px -40px rgba(0,0,0,0.2);
+}
+
+.cpbs-main .cpbs-circle
+{
+    text-align:center;
+    border-width:1px;
+    border-style:solid;
+    border-radius:9999em;
+    display:inline-block;                
+}
+
+.cpbs-main img
+{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.cpbs-main a,
+.cpbs-main a:hover
+{
+    box-shadow:none;
+    text-decoration:none;
+}
+
+.cpbs-main label
+{
+    margin-bottom:0px;
+}
+
+.cpbs-main input[type="submit"]
+{
+    cursor:pointer;
+}
+
+.cpbs-booking-form-error
+{
+    color:red;
+}
+
+.theiaStickySidebar
+{
+	max-width:100% !important;
+}
+
+/******************************************************************************/
+/* Font                                                                       */
+/******************************************************************************/
+
+.cpbs-main,
+.cpbs-main a,
+.cpbs-main .cpbs-notice,
+.cpbs-main .cpbs-qtip .qtip-content,
+.cpbs-main.ui-datepicker .ui-datepicker-title
+{
+    font-size:16px;
+    font-weight:400;
+	line-height:26px;
+}
+
+.cpbs-main,
+.cpbs-main input,
+.cpbs-main select,
+.cpbs-main textarea,
+.cpbs-main .ui-menu .ui-menu-item,
+.cpbs-main .ui-timepicker-wrapper,
+.cpbs-main.ui-datepicker th,
+.cpbs-main.ui-datepicker td,
+.cpbs-main.ui-datepicker td a,
+.cpbs-main.ui-datepicker td span
+{
+    font-family:'Source Sans Pro';
+}
+
+.cpbs-main label,
+.cpbs-main label a,
+.cpbs-main .cpbs-rental-date-box>div>span:first-child,
+.cpbs-main .cpbs-attribute-field .cpbs-attribute-field-name
+{
+	font-family:'Lato';
+}
+
+/******************************************************************************/
+/* Margin                                                                     */
+/******************************************************************************/
+
+html .cpbs-main .cpbs-margin-top-30												{	margin-top:30px; }
+html .cpbs-main .cpbs-margin-top-40												{	margin-top:40px; }
+
+/******************************************************************************/
+/* State                                                                     */
+/******************************************************************************/
+
+.cpbs-state-disabled,
+.cpbs-state-readonly
+{
+	overflow:hidden;
+	position:relative;
+}
+
+	.cpbs-state-disabled::after,
+	.cpbs-state-readonly::after
+	{
+		top:0px;
+		left:0px;
+		width:100%;
+		content:"";
+		opacity:0.6;
+		height:999em;
+		display:block;
+		position:absolute;
+		background:#FFFFFF;
+	}
+
+/******************************************************************************/
+/* Icon                                                                       */
+/******************************************************************************/
+    
+@font-face 
+{
+    font-family:'cpbs-meta-icon';
+    src:url('../font/meta-icon.eot');
+    src:url('../font/meta-icon.eot') format('embedded-opentype'),url('../font/meta-icon.ttf') format('truetype'),url('../font/meta-icon.woff') format('woff'),url('../font/meta-icon.svg') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face 
+{
+    font-family:'cpbs-feature-icon';
+    src:url('../font/feature-icon.eot');
+    src:url('../font/feature-icon.eot') format('embedded-opentype'),url('../font/feature-icon.ttf') format('truetype'),url('../font/feature-icon.woff') format('woff'),url('../font/feature-icon.svg') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+[class^="cpbs-meta-icon-"],
+[class*=" cpbs-meta-icon-"],
+.cpbs-main.ui-datepicker .ui-datepicker-prev,
+.cpbs-main.ui-datepicker .ui-datepicker-next,
+.cpbs-main .slick-prev,
+.cpbs-main .slick-next,
+.cpbs-main .cpbs-button.cpbs-state-selected:after,
+.cpbs-main .cpbs-place .cpbs-place-attribute-1>div:before,
+.cpbs-main .cpbs-place .cpbs-place-attribute-2>div:before
+{
+    font-family:'cpbs-meta-icon' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+[class^="cpbs-feature-icon-"],
+[class*=" cpbs-feature-icon-"]
+{
+    font-family:'cpbs-feature-icon' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+	/**************************************************************************/
+	/* Icon / Meta                                                            */
+	/**************************************************************************/
+
+	.cpbs-main .cpbs-meta-icon-spaces:before,
+	.cpbs-main .cpbs-place .cpbs-place-attribute-2>div:before
+	{
+		content:"\62";
+	}	
+	
+	.cpbs-main .cpbs-meta-icon-space:before,
+	.cpbs-main .cpbs-place .cpbs-place-attribute-1>div:before
+	{
+		content:"\61";
+	}	
+
+	.cpbs-main .cpbs-meta-icon-bank:before 
+	{
+		content:"\41";
+	}	
+
+	.cpbs-main .cpbs-meta-icon-wallet:before 
+	{
+		content:"\42";
+	}	
+	
+	.cpbs-main .cpbs-meta-icon-close:before 
+	{
+		content:"\66";
+	}	
+
+	.cpbs-main .cpbs-meta-icon-tick:before,
+	.cpbs-main .cpbs-button.cpbs-state-selected:after
+	{
+		content:"\63";
+	}	
+
+	.cpbs-main .cpbs-meta-icon-arrow-horizontal:before,
+	.cpbs-main .slick-prev:before,
+	.cpbs-main .slick-next:before,
+	.cpbs-main.ui-datepicker .ui-datepicker-prev:before,
+	.cpbs-main.ui-datepicker .ui-datepicker-next:before
+	{
+		content:"\64";
+	}
+	.cpbs-main .cpbs-meta-icon-arrow-vertical:before 
+	{
+		content:"\65";
+	} 
+
+	/**************************************************************************/
+	/* Icon / Feature                                                         */
+	/**************************************************************************/
+
+	.cpbs-main .cpbs-feature-icon-01:before 
+	{
+		content:"\61";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-02:before 
+	{
+		content:"\62";
+	}
+	
+	.cpbs-main .cpbs-feature-icon-03:before 
+	{
+		content:"\63";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-04:before 
+	{
+		content:"\64";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-05:before 
+	{
+		content:"\65";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-06:before 
+	{
+		content:"\66";
+	}		
+	
+	.cpbs-main .cpbs-feature-icon-07:before 
+	{
+		content:"\67";
+	}
+	
+	.cpbs-main .cpbs-feature-icon-08:before 
+	{
+		content:"\68";
+	}	
+
+	.cpbs-main .cpbs-feature-icon-09:before 
+	{
+		content:"\69";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-10:before 
+	{
+		content:"\6a";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-11:before 
+	{
+		content:"\6b";
+	}	
+
+	.cpbs-main .cpbs-feature-icon-12:before 
+	{
+		content:"\6c";
+	}	
+
+	.cpbs-main .cpbs-feature-icon-13:before 
+	{
+		content:"\6d";
+	}
+	
+	.cpbs-main .cpbs-feature-icon-14:before 
+	{
+		content:"\6e";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-15:before 
+	{
+		content:"\6f";
+	}	
+	
+	.cpbs-main .cpbs-feature-icon-16:before 
+	{
+		content:"\70";
+	}
+	
+	.cpbs-main .cpbs-feature-icon-17:before 
+	{
+		content:"\71";
+	}	
+	
+/******************************************************************************/
+/* Icon complete	                                                          */
+/******************************************************************************/
+
+.cpbs-icon-booking-complete
+{
+	width:158px;
+	height:107px;
+	margin-left:auto;
+	margin-right:auto;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-image:url('../media/image/public/icon_order.png');
+}
+	
+/******************************************************************************/
+/* Transition                                                                 */
+/******************************************************************************/
+
+.cpbs-main .cpbs-button.cpbs-button-style-1,
+.cpbs-main .cpbs-button.cpbs-button-style-2,
+.cpbs-main .cpbs-button.cpbs-button-style-3,
+.cpbs-main .cpbs-button.cpbs-button-style-1:hover,
+.cpbs-main .cpbs-button.cpbs-button-style-2:hover,
+.cpbs-main .cpbs-button.cpbs-button-style-3:hover,
+.cpbs-main .cpbs-location-add,
+.cpbs-main .cpbs-location-remove,
+.cpbs-main .cpbs-location-add:hover,
+.cpbs-main .cpbs-location-remove:hover,
+.cpbs-main .slick-prev,
+.cpbs-main .slick-next,
+.cpbs-main.ui-datepicker .ui-datepicker-prev,
+.cpbs-main.ui-datepicker .ui-datepicker-next,    
+.cpbs-main.ui-datepicker .ui-datepicker-prev.ui-state-hover,
+.cpbs-main.ui-datepicker .ui-datepicker-next.ui-state-hover,
+.cpbs-main.cpbs-main .cpbs-quantity>a
+{
+    transition:all 150ms ease;
+}
+
+/******************************************************************************/
+/* Main                                                                       */
+/******************************************************************************/
+
+.cpbs-main
+{
+   
+}
+
+    .cpbs-main .cpbs-main-content
+    {
+        margin-top:50px;
+    }
+    
+    .cpbs-main .cpbs-main-content>div
+    {
+        display:none;
+    }
+    
+    .cpbs-main .cpbs-main-content>div:first-child
+    {
+        display:block;
+    }
+    
+    .cpbs-main .cpbs-main-content>div>div:last-child
+    {
+        margin-top:50px;
+    }
+
+/******************************************************************************/
+/* Label                                                                      */
+/******************************************************************************/
+
+.cpbs-main label,
+.cpbs-main label a
+{
+    font-size:12px;
+    font-weight:400;
+	line-height:150%;
+	text-transform:uppercase;	
+}
+
+.cpbs-main label a,
+.cpbs-main label a:hover
+{
+	text-decoration:underline;
+}
+
+.cpbs-main label
+{
+	clear:both;
+	display:block;
+	margin-bottom:7px;
+}
+
+/******************************************************************************/
+/* Qtip         															  */
+/******************************************************************************/
+
+.cpbs-main .cpbs-qtip
+{
+    margin:0px 0px 0px 0px !important;
+}
+
+.cpbs-main .cpbs-qtip,
+.cpbs-main .cpbs-notice
+{
+    margin:0px;
+    padding:0px;
+    border:none;
+    box-shadow:none;
+    min-width:200px;
+    border-width:1px;
+    border-style:solid;	
+}
+
+.cpbs-main .cpbs-qtip,
+.cpbs-main .cpbs-qtip .qtip-content
+{
+	font-size:14px;
+	min-width:160px;
+}
+
+.cpbs-main .cpbs-notice,
+.cpbs-main .cpbs-qtip .qtip-content
+{
+    padding:8px 15px 10px 15px;
+}
+   
+.cpbs-main .cpbs-notice
+{
+    width:100%;
+    margin:0px 0px 40px 0px;
+}
+
+/******************************************************************************/
+/* Button                                                                     */
+/******************************************************************************/
+
+.cpbs-main .cpbs-button,
+.cpbs-main .cpbs-button:hover
+{
+	cursor:pointer;
+    text-decoration:none;
+}
+
+.cpbs-main .cpbs-button.cpbs-button-style-1,
+.cpbs-main .cpbs-button.cpbs-button-style-2,
+.cpbs-main .cpbs-button.cpbs-button-style-3
+{
+    font-size:16px;
+    font-weight:700;
+    border-width:2px;
+	text-align:center;
+    border-style:solid;
+    padding:10px 32px 10px 32px;
+}
+
+.cpbs-main .cpbs-button.cpbs-state-selected:after
+{
+	font-size:18px;
+}
+
+.cpbs-main .cpbs-button.cpbs-button-style-3
+{
+	font-size:12px;
+}
+
+    .cpbs-main .cpbs-button.cpbs-button-step-next>span,
+    .cpbs-main .cpbs-button.cpbs-button-step-prev>span
+    {
+        top:2px;
+        font-size:18px;
+        position:relative;
+        padding-left:12px;
+        display:inline-block;
+    }
+    
+    .cpbs-main .cpbs-button.cpbs-button-step-prev>span
+    {
+        transform:scaleX(-1);
+        -moz-transform:scaleX(-1);
+        -o-transform:scaleX(-1);
+        -webkit-transform:scaleX(-1);
+        transform:scaleX(-1);
+        filter:FlipH;
+        -ms-filter:"FlipH";
+    }
+	
+.cpbs-main .cpbs-button.cpbs-state-disabled
+{
+	opacity:0.4;
+	border:none;
+	cursor:default;
+	padding-top:16px;
+	padding-bottom:17px;
+}
+  
+.cpbs-main .cpbs-button.cpbs-button-step-prev
+{
+    padding:14px 32px 16px 24px;
+}
+
+.cpbs-main .cpbs-button.cpbs-button-step-next
+{
+    padding:14px 24px 16px 32px;
+}
+    
+.cpbs-main .cpbs-button span.cpbs-meta-icon-tick
+{
+    display:none;
+}
+    
+.cpbs-main .cpbs-button.cpbs-state-selected span.cpbs-meta-icon-tick
+{
+    display:inline-block;
+}
+
+/******************************************************************************/
+/* Button checkbox                                                            */
+/******************************************************************************/
+
+.cpbs-button-checkbox
+{
+    
+}
+
+    .cpbs-button-checkbox>a
+    {
+        z-index:1;
+        float:left;
+        display:block;
+        font-size:12px;
+        font-weight:400;
+        position:relative;
+        border-width:1px;
+        border-style:solid;
+        text-transform:uppercase;
+        padding:17px 20px 17px 20px;
+    }
+    
+    .cpbs-button-checkbox>a+a
+    {
+        left:-1px;
+    }
+    
+    .cpbs-button-checkbox>a:first-child
+    {
+        border-top-left-radius:2px;
+        border-bottom-left-radius:2px;
+    }
+    
+    .cpbs-button-checkbox>a:last-child
+    {
+        border-top-right-radius:2px;
+        border-bottom-right-radius:2px;       
+    }
+    
+    .cpbs-button-checkbox>a.cpbs-state-selected
+    {
+        z-index:2;
+    }
+
+/******************************************************************************/
+/* Button navigation                                                          */
+/******************************************************************************/
+
+.cpbs-main .cpbs-main-content-navigation-button
+{
+ 
+}
+
+    .cpbs-main .cpbs-main-content-navigation-button .cpbs-button.cpbs-button-step-prev
+    {
+        float:left;
+    }
+
+    .cpbs-main .cpbs-main-content-navigation-button .cpbs-button.cpbs-button-step-next
+    {
+        float:right;
+    }
+
+/******************************************************************************/
+/* Selectmenu                                                                 */
+/******************************************************************************/
+
+.cpbs-main .ui-selectmenu-button
+{
+    display:block;
+    width:100% !important;
+    padding:0px 20px 21px 20px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+{
+    .cpbs-main .ui-selectmenu-button
+    {
+        padding-bottom:15px;
+    }
+}
+
+    .cpbs-main .ui-selectmenu-button .ui-selectmenu-text
+    {
+        padding:1px 0px 0px 0px;
+    }
+    
+    .cpbs-main .ui-selectmenu-button .cpbs-meta-icon-arrow-vertical
+    {
+        float:right;
+        margin-top:5px;
+        transform:scaleY(-1);
+    }
+    
+.cpbs-main .ui-menu
+{
+    padding:0px;
+}
+
+    .cpbs-main .ui-menu .ui-menu-item
+    {
+        font-size:18px;
+        font-weight:400;
+		line-height:26px;
+        border-style:solid;
+        padding:10px 20px 10px 20px;
+        border-width:1px 0px 0px 0px;
+    }
+    
+    .cpbs-main .ui-menu .ui-menu-item:first-child
+    {
+        border-width:0px;
+    }
+    
+    .cpbs-main .ui-menu .ui-state-focus,
+    .cpbs-main .ui-menu .ui-state-active
+    {
+        margin:0px;
+    }
+        
+.cpbs-main .ui-selectmenu-menu
+{
+    max-height:204px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border-width:1px;
+    border-style:solid;
+}
+
+/******************************************************************************/
+/* Timepicker                                                                 */
+/******************************************************************************/
+  
+.cpbs-main .ui-timepicker-wrapper
+{
+    opacity:0;
+    z-index:2;
+    height:236px;
+    max-height:236px;
+    margin-left:-1px;
+}
+
+    .cpbs-main .ui-timepicker-wrapper .ui-timepicker-list
+    {
+        
+    }
+    
+        .cpbs-main .ui-timepicker-wrapper .ui-timepicker-list>li
+        {
+            font-size:18px;
+            font-weight:400;
+			line-height:26px;
+            border-style:solid;
+            padding:10px 20px 10px 20px;
+            border-width:1px 0px 0px 0px;
+        }
+        
+            .cpbs-main .ui-timepicker-wrapper .ui-timepicker-list>li:first-child
+            {
+                border-width:0px;
+            }
+  
+.cpbs-main .ui-timepicker-disabled
+{
+	display:none;
+}
+	            
+/******************************************************************************/
+/* Datepicker                                                                 */
+/******************************************************************************/            
+
+.cpbs-main.ui-datepicker
+{
+    z-index:3;
+    width:auto;
+    margin-left:-1px;
+    border-width:1px;
+    border-style:solid;
+    padding:20px 20px 30px 20px;
+}
+
+	.cpbs-main.ui-datepicker .ui-datepicker-header 
+	{
+		padding:0px;
+		min-height:40px;
+	}
+
+    .cpbs-main.ui-datepicker .ui-datepicker-title
+    {
+		line-height:40px;
+        margin:0px 0px 0px 0px;
+	}
+    
+    .cpbs-main.ui-datepicker .ui-datepicker-today a
+    {
+        text-decoration:underline;
+    }
+    
+    .cpbs-main.ui-datepicker thead
+    {
+        border-style:solid;
+        border-width:0px 0px 1px 0px;
+    }
+    
+    .cpbs-main.ui-datepicker tbody
+    {
+        top:10px;
+        position:relative;
+    }
+    
+    .cpbs-main.ui-datepicker th,
+    .cpbs-main.ui-datepicker td,
+    .cpbs-main.ui-datepicker td a,
+    .cpbs-main.ui-datepicker td span
+    {
+        line-height:1;
+    }
+	
+	.cpbs-main.ui-datepicker table
+	{
+		margin:0px;
+	}
+    
+    .cpbs-main.ui-datepicker th
+    {
+        font-size:16px;
+        font-weight:400;
+        line-height:26px;
+        text-align:center;
+        text-transform:uppercase;
+        padding:20px 0px 20px 0px;
+    }
+    
+    .cpbs-main.ui-datepicker td
+    {
+        padding:0px;
+    }
+    
+        .cpbs-main.ui-datepicker td,
+        .cpbs-main.ui-datepicker td a
+        {
+            font-size:16px;
+			font-weight:400;
+        }
+    
+        .cpbs-main.ui-datepicker td a,
+        .cpbs-main.ui-datepicker td span
+        {
+            width:44px;
+            height:44px;
+            padding:0px;
+            line-height:42px;
+            text-align:center;
+        }
+        
+        .cpbs-main.ui-datepicker td a.ui-state-hover
+        {
+            line-height:38px;
+            border-width:2px;
+            border-style:solid;
+            border-radius:9999em;
+        }
+        
+.cpbs-main.ui-datepicker .ui-datepicker-prev,
+.cpbs-main.ui-datepicker .ui-datepicker-next
+{
+    width:40px;
+    height:40px;
+    display:block;
+    cursor:pointer;
+	font-size:15px;
+    line-height:40px;
+    border-width:1px;
+    text-align:center;
+    border-style:solid;
+    border-radius:9999em;
+}
+
+.cpbs-main.ui-datepicker .ui-datepicker-prev,
+.cpbs-main.ui-datepicker .ui-datepicker-next,
+.cpbs-main.ui-datepicker .ui-datepicker-prev-hover,
+.cpbs-main.ui-datepicker .ui-datepicker-next-hover
+{
+    top:0px;
+}
+
+.cpbs-main.ui-datepicker .ui-datepicker-prev,
+.cpbs-main.ui-datepicker .ui-datepicker-prev-hover
+{
+    left:0px;
+    margin-left:0px;
+}
+
+.cpbs-main.ui-datepicker .ui-datepicker-next,
+.cpbs-main.ui-datepicker .ui-datepicker-next-hover
+{
+    right:0px;
+    margin-right:0px;
+}
+
+.cpbs-main.ui-datepicker .ui-datepicker-prev
+{
+    transform:scaleX(-1);
+}
+
+/******************************************************************************/
+/* Slick                                                                 */
+/******************************************************************************/   			
+		
+.cpbs-main .slick-prev,
+.cpbs-main .slick-next
+{
+	top:-35px;
+	z-index:3;
+	float:left;
+	width:55px;
+	height:55px;
+	display:block;
+	line-height:55px;
+	position:absolute;
+	text-align:center;
+}
+
+.cpbs-main .slick-next
+{
+	left:55px;
+}
+
+.cpbs-main .slick-prev
+{
+	transform:scaleX(-1);
+}
+
+/******************************************************************************/
+/* Preloader                                                                  */
+/******************************************************************************/    
+
+#cpbs-preloader
+{
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:100;
+    display:none;
+    opacity:0.2;
+    cursor:not-allowed;
+    position:absolute;
+    background:#FFFFFF
+}
+
+/******************************************************************************/
+/* Layout                                                                     */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Layout / Layout 50x50                                                  */
+    /**************************************************************************/
+
+    .cpbs-main .cpbs-layout-50x50
+    {
+        
+    }
+    
+        .cpbs-main .cpbs-layout-50x50>.cpbs-layout-column-left,
+        .cpbs-main .cpbs-layout-50x50>.cpbs-layout-column-right
+        {
+            width:48.36066%;
+        }
+    
+        .cpbs-main .cpbs-layout-50x50>.cpbs-layout-column-left
+        {
+            float:left;
+        }
+        
+        .cpbs-main .cpbs-layout-50x50>.cpbs-layout-column-right
+        {
+            float:right;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 33x33x33                                               */
+    /**************************************************************************/
+        
+    .cpbs-main .cpbs-layout-33x33x33
+    {
+        
+    }
+    
+        .cpbs-main .cpbs-layout-33x33x33>.cpbs-layout-column-left,
+        .cpbs-main .cpbs-layout-33x33x33>.cpbs-layout-column-center,
+        .cpbs-main .cpbs-layout-33x33x33>.cpbs-layout-column-right
+        {
+            float:left;
+            width:31.1477%;
+        }
+            
+        .cpbs-main .cpbs-layout-33x33x33>.cpbs-layout-column-left,
+        .cpbs-main .cpbs-layout-33x33x33>.cpbs-layout-column-center
+        {
+            margin-right:3.2784%;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 25x75                                                  */
+    /**************************************************************************/
+
+    .cpbs-main .cpbs-layout-25x75
+    {
+        
+    }
+    
+        .cpbs-main .cpbs-layout-25x75>.cpbs-layout-column-left
+        {
+            float:left;
+            width:22.5410%;
+        }
+
+        .cpbs-main .cpbs-layout-25x75>.cpbs-layout-column-right
+        {
+            float:right;
+            width:74.18033%;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 75x25                                                  */
+    /**************************************************************************/
+
+    .cpbs-main .cpbs-layout-75x25
+    {
+        
+    }
+    
+        .cpbs-main .cpbs-layout-75x25>.cpbs-layout-column-left
+        {
+            float:left;
+            width:73.7705%;
+        }
+
+        .cpbs-main .cpbs-layout-75x25>.cpbs-layout-column-right
+        {
+            float:right;
+            width:22.5410%;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 33x33x33                                               */
+    /**************************************************************************/
+        
+    .cpbs-main .cpbs-layout-50x25x25
+    {
+        
+    }
+    
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-left,
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-center,
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-right
+        {
+            float:left;
+        }
+		
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-left
+		{
+			width:48.36066%;	
+		}
+		
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-center,
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-right
+		{
+			width:22.5410%;
+		}
+            
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-left,
+        .cpbs-main .cpbs-layout-50x25x25>.cpbs-layout-column-center
+        {
+            margin-right:3.2784%;
+        }
+
+/******************************************************************************/
+/* Main navigation                                                            */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Main navigation / Default                                              */
+    /**************************************************************************/
+
+    .cpbs-main .cpbs-main-navigation-default
+    {
+        display:block;
+    }
+
+        .cpbs-main .cpbs-main-navigation-default>ul
+        {
+
+        }
+
+            .cpbs-main .cpbs-main-navigation-default>ul>li
+            {
+                width:25%;
+                float:left;
+                position:relative;  
+                text-align:center;
+            }
+            
+            .cpbs-main .cpbs-main-navigation-default[data-step-count="3"]>ul>li
+            {
+                width:33.33333333%;
+            }
+
+                .cpbs-main .cpbs-main-navigation-default>ul>li>div
+                {
+                    left:50%;
+                    top:25px;
+                    z-index:1;
+                    height:2px;
+                    width:100%;
+                    position:absolute;
+                }
+                
+                .cpbs-main .cpbs-main-navigation-default>ul>li:last-child>div
+                {
+                    display:none;
+                }
+                
+                .cpbs-main .cpbs-main-navigation-default>ul>li>a
+                {
+                    display:block;
+                }
+
+                .cpbs-main .cpbs-main-navigation-default>ul>li>a,
+                .cpbs-main .cpbs-main-navigation-default>ul>li>a:hover
+                {
+                    text-decoration:none;
+                }
+
+                    .cpbs-main .cpbs-main-navigation-default>ul>li>a>span
+                    {
+                        display:block;
+                        margin-left:auto;
+                        margin-right:auto; 
+                    }
+
+                    .cpbs-main .cpbs-main-navigation-default>ul>li>a>span:first-child
+                    {
+                        z-index:2;
+                        width:50px;
+                        height:50px;
+                        font-weight:700;
+                        position:relative;
+                        text-align:center;
+                        border-width:2px;
+                        border-radius:100%;
+                        border-style:solid;
+                    }
+      
+                        .cpbs-main .cpbs-main-navigation-default>ul>li>a>span:first-child>span:first-child
+                        {
+                            font-size:24px;
+							font-weight:400;
+							line-height:44px;
+                        }
+                        
+                        .cpbs-main .cpbs-main-navigation-default>ul>li.cpbs-state-completed>a>span:first-child>span:first-child
+                        {
+                            display:none;
+                        }
+                        
+                        .cpbs-main .cpbs-main-navigation-default>ul>li>a>span:first-child>span.cpbs-meta-icon-tick
+                        {
+                            display:none;
+                            font-size:23px;
+                            line-height:48px;
+                        }
+                        
+                        .cpbs-main .cpbs-main-navigation-default>ul>li.cpbs-state-completed>a>span:first-child>span.cpbs-meta-icon-tick
+                        {
+                            display:block;
+                        }
+
+                    .cpbs-main .cpbs-main-navigation-default>ul>li>a>span:first-child+span
+                    {
+                        font-size:16px;
+                        font-weight:400;
+                        margin-top:13px;
+                    }
+                
+    /**************************************************************************/
+    /* Main navigation / Responsive                                           */
+    /**************************************************************************/
+
+    .cpbs-main .cpbs-main-navigation-responsive
+    {
+        display:none;
+    }
+    
+        .cpbs-main .cpbs-main-navigation-responsive>.cpbs-form-field
+        {
+            border-top-width:1px;
+        }
+		
+/******************************************************************************/
+/* Step 1		                                                              */
+/******************************************************************************/ 		
+	
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-1
+{
+	
+	
+}
+
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-1>.cpbs-layout-50x50
+	{
+		display:flex;
+	}
+
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-1>.cpbs-layout-50x50>.cpbs-layout-column-left
+	{
+		padding:30px;
+		border-width:1px;
+		border-style:solid;
+	}
+
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-1>.cpbs-layout-50x50>.cpbs-layout-column-left,
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-1>.cpbs-layout-50x50>.cpbs-layout-column-right
+	{
+		width:50%;
+	}
+
+	.cpbs-main.cpbs-booking-form-widget-mode .cpbs-main-content .cpbs-main-content-step-1>.cpbs-layout-50x50>.cpbs-layout-column-left
+	{
+		width:100%;
+		padding:0px;
+		border:none;
+	}
+
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel
+	{
+		position:relative;
+	}
+	
+	.cpbs-main.cpbs-google-map-enable-0 .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel,
+	.cpbs-main.cpbs-booking-form-widget-mode .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel
+	{
+		border-width:1px;
+		border-style:solid;
+	}
+	
+		.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child
+		{
+			z-index:2;
+			width:100%;
+			padding:30px;
+			position:absolute;
+		}
+		
+		.cpbs-main.cpbs-google-map-enable-0 .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child,
+		.cpbs-main.cpbs-booking-form-widget-mode .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child
+		{
+			padding:0px;
+			position:static;
+		}
+		
+			.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div
+			{
+				padding:30px 0px 0px 30px;
+			}
+			
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>input
+				{
+					width:calc(100% - 30px);
+					margin-right:30px;
+					margin-bottom:30px;
+					padding-top:13px;
+					padding-bottom:13px;
+				}
+		
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div,
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div
+				{
+					clear:both;
+					display:flex;
+					flex-direction:row;	
+				}
+				
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div
+				{
+					flex-wrap:wrap;
+				}
+				
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div
+				{
+					flex-wrap:wrap;
+				}
+				
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div,
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div>div
+				{
+					flex-grow:1;
+					max-width:100%;
+				}
+				
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div
+				{
+					padding-right:30px;
+					padding-bottom:30px;
+					flex-basis:350px;
+				}
+				
+				.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div:first-child
+				{
+					margin-left:0px;
+				}
+				
+					.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div>div
+					{
+						flex-basis:170px;
+					}
+					
+					.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div>.cpbs-form-field+.cpbs-form-field
+					{
+						border-left-width:0px;
+					}
+			
+		.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child+div
+		{
+			z-index:1;
+			position:relative;
+		}
+		
+/******************************************************************************/
+/* Step 2		                                                              */
+/******************************************************************************/ 	
+	
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-2>.cpbs-layout-25x75 .cpbs-layout-column-left .cpbs-summary-box
+{
+	padding:30px;
+	border-width:1px;
+	border-style:solid;	
+}
+
+/******************************************************************************/
+/* Step 3		                                                              */
+/******************************************************************************/ 	
+		
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-3>.cpbs-layout-25x75 .cpbs-layout-column-left .cpbs-summary-box
+{
+	padding:30px;
+	border-width:1px;
+	border-style:solid;	
+}
+
+/******************************************************************************/
+/* Step 4		                                                              */
+/******************************************************************************/ 		
+	
+.cpbs-main .cpbs-main-content .cpbs-main-content-step-4
+{
+	
+}	
+
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-4>.cpbs-layout-50x50>.cpbs-layout-column-left,
+	.cpbs-main .cpbs-main-content .cpbs-main-content-step-4>.cpbs-layout-50x50>.cpbs-layout-column-right
+	{
+		padding:30px;
+		border-width:1px;
+		border-style:solid;
+	}
+		
+/******************************************************************************/
+/* Header	                                                                  */
+/******************************************************************************/  
+
+.cpbs-main .cpbs-header
+{
+	margin:0px 0px 20px 0px;
+}
+
+	.cpbs-main .cpbs-header>span:last-child
+	{
+		
+	}
+	
+.cpbs-main *+.cpbs-header	
+{
+	margin-top:40px;
+}
+	
+.cpbs-main .cpbs-header.cpbs-header-style-1
+{
+	
+}
+
+.cpbs-main .cpbs-header.cpbs-header-style-2
+{
+	font-size:34px;
+	font-weight:700;
+	line-height:40px;
+}
+
+.cpbs-main .cpbs-header.cpbs-header-style-3
+{
+	font-size:24px;
+	font-weight:700;
+	line-height:34px;
+	margin-bottom:30px;
+}
+
+.cpbs-main .cpbs-header.cpbs-header-style-4,
+.cpbs-main .cpbs-rental-date-box>div>span:first-child+span
+{
+	font-size:18px;
+	font-weight:600;
+	line-height:28px;	
+}
+
+/******************************************************************************/
+/* Form panel                                                                 */
+/******************************************************************************/     
+                    
+.cpbs-form-panel
+{
+   
+}
+
+	.cpbs-form-panel+.cpbs-form-panel
+	{
+		margin-top:50px;
+	}
+    
+    .cpbs-form-panel .cpbs-form-panel-content
+    {
+        position:relative;
+        border-style:solid;
+        border-width:3px 0px 0px 0px;
+    }
+   
+/******************************************************************************/
+/* Disable section                                                            */
+/******************************************************************************/        
+    
+.cpbs-disable-section
+{
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    opacity:0.5;
+    position:absolute;
+    background:#FFFFFF;
+}
+
+/******************************************************************************/
+/* Form checkbox                                                              */
+/******************************************************************************/
+
+.cpbs-main .cpbs-form-checkbox
+{
+    float:left;
+    width:30px;
+    height:30px;
+    display:block;
+    cursor:pointer;
+    margin-right:20px;
+    border-width:2px;
+    border-style:solid;
+}
+
+    .cpbs-main .cpbs-form-checkbox>.cpbs-meta-icon-tick
+    {
+        display:none;
+        font-size:22px;
+        line-height:28px;
+        text-align:center;
+    }
+    
+    .cpbs-main .cpbs-form-checkbox.cpbs-state-selected>.cpbs-meta-icon-tick
+    {
+        display:block;
+    }
+    
+.cpbs-main .cpbs-form-checkbox+span
+{
+    margin-left:30px;
+}
+    
+.cpbs-main .cpbs-form-checkbox+span+input[type="checkbox"]
+{
+    opacity:0;
+}
+
+.cpbs-main .cpbs-form-panel-label .cpbs-form-checkbox
+{
+    top:9px;
+    left:10px;
+    position:absolute;
+}
+
+.cpbs-main .cpbs-form-panel-label .cpbs-form-checkbox+span
+{
+    top:1px;
+    position:relative;
+}
+
+/******************************************************************************/
+/* Form field                                                                 */
+/******************************************************************************/
+
+.cpbs-main .cpbs-form-field
+{
+	margin-top:-1px;
+    position:relative;
+	border-width:1px;
+    border-style:solid;
+    padding:16px 0px 0px 0px;
+}
+
+.cpbs-main .cpbs-form-field.cpbs-form-field-width-50
+{
+    width:50%;
+    float:left;
+}
+
+.cpbs-main .cpbs-form-field.cpbs-form-field-width-33
+{
+    width:33.33333333%;
+    float:left;   
+}
+
+.cpbs-main .cpbs-form-field.cpbs-form-field-width-50+.cpbs-form-field-width-50,
+.cpbs-main .cpbs-form-field.cpbs-form-field-width-33+.cpbs-form-field-width-33
+{
+    border-left-width:0px;
+}
+
+    .cpbs-main .cpbs-form-field>label
+    {
+        margin-left:20px;
+    }    
+    
+    .cpbs-main .cpbs-form-field>input,
+    .cpbs-main .cpbs-form-field>textarea,
+    .cpbs-main .cpbs-form-field .ui-selectmenu-button
+    {
+        clear:both;
+        width:100%;
+    }
+    
+    .cpbs-main .cpbs-form-field>input,
+    .cpbs-main .cpbs-form-field>select,
+    .cpbs-main .cpbs-form-field>textarea
+    {
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:20px;
+    }
+    
+    .cpbs-main .cpbs-form-field>input,
+    .cpbs-main .cpbs-form-field>textarea,
+    .cpbs-main .cpbs-form-field .ui-selectmenu-button
+    {
+        border:none;
+    }
+    
+    .cpbs-main .cpbs-form-field>input,
+    .cpbs-main .cpbs-form-field>textarea,
+    .cpbs-main .cpbs-form-field .ui-selectmenu-button,
+    .cpbs-main .ui-selectmenu-menu
+    {
+        font-size:20px;
+        font-weight:600;
+		line-height:28px;
+    }
+	
+    .cpbs-main .cpbs-form-field .ui-selectmenu-button
+	{
+		font-size:18px;
+	}
+
+    .cpbs-main .cpbs-form-field>textarea
+    {
+        resize:none;
+        overflow:auto;
+    }
+    
+    .cpbs-main .cpbs-form-field>input[type="checkbox"]
+    {
+        cursor:pointer;
+    }
+
+/******************************************************************************/
+/* Place list                                                               */
+/******************************************************************************/
+
+.cpbs-main .cpbs-place-list
+{
+   
+}
+
+.cpbs-main .cpbs-place-list+.cpbs-booking-extra
+{
+	margin-top:40px;
+}
+
+	.cpbs-main .cpbs-place-list>.cpbs-header
+	{
+		margin-bottom:5px;
+	}
+
+    .cpbs-main .cpbs-place-list>ul
+    {
+       margin-top:30px; 
+    }
+
+        .cpbs-main .cpbs-place-list>ul>li
+        {
+            margin-top:30px;
+        }
+        
+        .cpbs-main .cpbs-place-list>ul>li:first-child
+        {
+            margin-top:0px;
+        }
+
+/******************************************************************************/
+/* Place                                                                    */
+/******************************************************************************/
+
+.cpbs-main .cpbs-place
+{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:20px;
+	min-height:210px;
+}
+
+.cpbs-main .cpbs-place:first-child
+{
+    margin-top:0px;
+}
+
+    /**************************************************************************/
+    /* Place / Layout                                                        */
+    /**************************************************************************/
+	
+	.cpbs-main .cpbs-place>.cpbs-place-layout-column-left
+	{
+		
+	}
+	
+	.cpbs-main .cpbs-place>.cpbs-place-layout-column-right
+	{
+		display:flex;
+		padding:30px;
+		flex-grow:1;
+		flex-direction:column;
+		justify-content:space-between;
+	}
+	
+		.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-top,
+		.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom
+		{
+			display:flex;
+			flex-direction:row;			
+		}
+	
+		.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-top
+		{
+
+		}
+		
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-top>div:first-child
+			{
+				flex-grow:1;
+				padding-right:30px;
+			}
+			
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-top>div:first-child+div
+			{
+				
+			}
+		
+		.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom
+		{
+	
+		}
+		
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child,
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child+div
+			{
+				flex-grow:1;
+			}
+		
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child
+			{
+				
+			}
+
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child+div
+			{
+		
+			}
+			
+			.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child+div+div
+			{
+				
+			}
+			
+				.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child+div+div>.cpbs-button
+				{
+					display:block;
+					min-width:140px;
+				}
+				
+				.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child+div+div>.cpbs-button:after
+				{
+					padding-left:10px;
+					display:inlline-block;
+				}
+
+    /**************************************************************************/
+    /* Place / Image	                                                      */
+    /**************************************************************************/
+				
+	.cpbs-main .cpbs-place .cpbs-place-image
+	{
+		opacity:0;
+	}
+	
+    /**************************************************************************/
+    /* Place / Name		                                                      */
+    /**************************************************************************/
+
+	.cpbs-main .cpbs-place .cpbs-place-name
+	{
+		margin-bottom:5px;
+	}
+	
+    /**************************************************************************/
+    /* Place / Location name                                                  */
+    /**************************************************************************/	
+	
+	.cpbs-main .cpbs-place .cpbs-place-location-name
+	{
+
+	}	
+	
+		.cpbs-main .cpbs-place .cpbs-place-location-name a,
+		.cpbs-main .cpbs-place .cpbs-place-location-name a:hover
+		{
+			text-decoration:underline;
+		}
+	
+    /**************************************************************************/
+    /* Place / Price													      */
+    /**************************************************************************/	
+	
+	.cpbs-main .cpbs-place .cpbs-place-price
+	{
+
+	}		
+	
+    /**************************************************************************/
+    /* Place / Attribute													  */
+    /**************************************************************************/	
+	
+	.cpbs-main .cpbs-place .cpbs-place-attribute-1
+	{
+
+	}		
+	
+	.cpbs-main .cpbs-place .cpbs-place-attribute-2
+	{
+
+	}
+	
+	.cpbs-main .cpbs-place .cpbs-place-attribute-1>div,
+	.cpbs-main .cpbs-place .cpbs-place-attribute-2>div
+	{
+		margin-top:0px;
+	}
+
+	.cpbs-main .cpbs-place .cpbs-place-attribute-1>div:before,
+	.cpbs-main .cpbs-place .cpbs-place-attribute-2>div:before
+	{
+		float:left;
+		margin-top:5px;
+		font-size:24px;
+	}
+	
+	.cpbs-main .cpbs-place .cpbs-place-attribute-1>div>div,
+	.cpbs-main .cpbs-place .cpbs-place-attribute-2>div>div
+	{
+		padding-left:50px;
+	}
+	
+    /**************************************************************************/
+    /* Place / Button														  */
+    /**************************************************************************/	
+	
+	.cpbs-main .cpbs-place .cpbs-place-select-button
+	{
+		
+	}
+	
+/******************************************************************************/
+/* Google Map                                                                 */
+/******************************************************************************/
+
+.cpbs-main #cpbs_google_map
+{
+    width:100%;
+}
+
+.cpbs-main .cpbs-google-map
+{
+    position:relative;
+}
+
+.cpbs-main .cpbs-google-map #cpbs_google_map
+{
+    height:800px;
+}
+
+.cpbs-main .cpbs-google-map-summary #cpbs_google_map
+{
+    height:232px;
+}
+
+.cpbs-main.google-map-enable-0 #cpbs_google_map
+{
+	display:none;
+}
+
+/******************************************************************************/
+/* Attribute                                                                    */
+/******************************************************************************/
+   
+.cpbs-main .cpbs-attribute-field
+{
+	height:100%;
+	overflow:hidden;
+	margin-top:15px;
+	padding-bottom:10px;
+}
+    
+    .cpbs-main .cpbs-attribute-field:last-child
+    {
+        padding-bottom:0px;
+    }
+	
+	.cpbs-main .cpbs-attribute-field+.cpbs-header
+	{
+		margin-top:30px;
+	}
+    
+        .cpbs-main .cpbs-attribute-field .cpbs-attribute-field-name
+        {
+            font-size:12px;
+            font-weight:400;
+            line-height:18px;
+            margin-bottom:5px;
+            text-transform:uppercase;
+        }
+        
+        .cpbs-main .cpbs-attribute-field .cpbs-attribute-field-value
+        {
+            font-size:16px;
+            font-weight:400;
+            line-height:28px;
+        }
+        
+/******************************************************************************/
+/* Summary price element                                                      */
+/******************************************************************************/
+
+.cpbs-main .cpbs-summary-price-element
+{
+    margin-top:20px;
+}
+
+    .cpbs-main .cpbs-summary-price-element>div
+    {
+		clear:both;
+    }
+    
+        .cpbs-main .cpbs-summary-price-element>div>span:first-child
+        {
+            
+        }
+        
+        .cpbs-main .cpbs-summary-price-element>div>span:first-child+span
+        {
+            float:right;
+        }
+        
+        .cpbs-main .cpbs-summary-price-element>div.cpbs-summary-price-element-total
+        {
+            margin-top:30px;
+            padding-top:20px;
+            position:relative;
+            border-style:solid;
+            border-width:1px 0px 0px 0px;       
+        }
+        
+        .cpbs-main .cpbs-summary-price-element>div.cpbs-summary-price-element-total>div
+        {
+			margin:0px;
+			display:inline-block;
+        }
+		
+		.cpbs-main .cpbs-summary-price-element>div.cpbs-summary-price-element-total>div:first-child
+		{
+			margin-top:6px;
+		}
+        
+        .cpbs-main .cpbs-summary-price-element>div.cpbs-summary-price-element-total>div:first-child+div
+        {
+            top:-1px;
+            right:0px;
+            float:right;
+            padding-top:21px;
+            position:absolute;
+            border-style:solid;
+            border-width:1px 0px 0px 0px;               
+        }
+
+/******************************************************************************/
+/* Payment                                                                    */
+/******************************************************************************/
+
+.cpbs-main #cpbs-payment
+{
+	margin-top:40px;
+}
+
+.cpbs-main #cpbs-payment>ul
+{
+	margin:0px;
+	padding:0px;
+    display:block;
+	list-style:none;
+}
+
+    .cpbs-main #cpbs-payment>ul>li
+    {
+		height:100%;
+		display:block;
+		margin-top:10px;
+		overflow:hidden;
+		padding:20px 30px 20px 30px;
+    }
+	
+	.cpbs-main #cpbs-payment>ul>li:first-child
+	{
+		margin-top:0px;
+	}
+	
+	
+		.cpbs-main #cpbs-payment>ul>li>.cpbs-header
+		{
+			margin:0px;
+			line-height:30px;
+		}
+		
+		.cpbs-main #cpbs-payment>ul>li>img
+		{
+			max-height:30px;
+		}
+        
+/******************************************************************************/
+/* Agreement                                                                  */
+/******************************************************************************/        
+
+.cpbs-agreement
+{
+    
+}
+
+    .cpbs-agreement>div
+    {
+        margin-top:15px;
+    }
+	
+	.cpbs-agreement>div:first-child
+	{
+		margin-top:0px;
+	}
+    
+        .cpbs-agreement>div>.cpbs-form-checkbox
+        {
+            
+        }
+        
+        .cpbs-agreement>div>.cpbs-form-checkbox+span
+        {
+            top:3px;
+            margin-left:0px;
+            position:relative;
+        }
+
+/******************************************************************************/
+/* Coupon                                                                     */
+/******************************************************************************/            
+        
+.cpbs-main .cpbs-coupon-code-section
+{
+	
+}
+
+    .cpbs-main .cpbs-coupon-code-section a.cpbs-button.cpbs-button-style-1
+    {
+        width:100%;
+		display:block;
+        margin-top:10px;
+		text-align:center;
+    }
+	
+/******************************************************************************/
+/* Rental date box                                                            */
+/******************************************************************************/
+
+.cpbs-main .cpbs-rental-date-box
+{
+	
+}
+
+	.cpbs-main .cpbs-rental-date-box
+	{
+		
+	}
+	
+		.cpbs-main .cpbs-rental-date-box>div
+		{
+			width:100%;
+			padding:20px;
+			display:block;
+			border-width:2px;
+			position:relative;
+			text-align:center;
+			border-style:solid;			
+		}
+		
+			.cpbs-main .cpbs-rental-date-box>div>span
+			{
+				display:block;
+			}
+			
+			.cpbs-main .cpbs-rental-date-box>div>span:first-child
+			{
+				
+			}
+			
+			.cpbs-main .cpbs-rental-date-box>div>span:first-child+span
+			{
+				margin-top:10px;
+			}
+	
+		.cpbs-main .cpbs-rental-date-box>div:first-child
+		{
+			
+		}
+
+		.cpbs-main .cpbs-rental-date-box>div:first-child+div
+		{
+			margin-top:20px;
+		}
+		
+		.cpbs-main .cpbs-rental-date-box>div:first-child::after
+		{
+			z-index:2;
+			width:1px;
+			content:"";
+			height:35px;
+			bottom:-35px;
+			position:absolute;
+		}
+	
+    
+/******************************************************************************/
+/* Client form                                                                */
+/******************************************************************************/
+              
+.cpbs-client-form
+{
+    
+}
+
+    .cpbs-client-form .cpbs-client-form-sign-in
+    {
+
+    }
+
+        .cpbs-client-form .cpbs-client-form-sign-in .cpbs-form-panel+div
+        {
+            margin-top:30px;
+            margin-bottom:30px;
+            text-align:right;
+        }
+        
+        .cpbs-client-form .cpbs-client-form-sign-in .cpbs-form-panel+div>a
+        {
+            display:inline-block;
+        }
+		
+/******************************************************************************/
+/* Quantity		                                                              */
+/******************************************************************************/
+
+.cpbs-main .cpbs-quantity
+{
+	
+}
+
+	.cpbs-main .cpbs-quantity>*
+	{
+		float:left;
+		text-align:center;
+	}
+
+	.cpbs-main .cpbs-quantity>a
+	{
+		width:50px;
+		height:50px;
+		display:block;
+		font-size:16px;
+		font-weight:700;
+		line-height:50px;
+	}
+	
+	.cpbs-main .cpbs-quantity>input
+	{
+		width:50px;
+		padding:10px;
+		border:none;
+		font-size:20px;
+		font-weight:600;
+	}
+
+/******************************************************************************/
+/* Booking extra                                                              */
+/******************************************************************************/
+
+.cpbs-main .cpbs-booking-extra-list
+{
+    
+}
+
+    .cpbs-main .cpbs-booking-extra-list>ul
+    {
+       
+    }
+    
+        .cpbs-main .cpbs-booking-extra-list>ul>li
+        {
+			padding:30px;
+            display:flex;
+			margin-top:10px;
+			flex-direction:row;
+        }
+		
+		.cpbs-main .cpbs-booking-extra-list>ul>li:first-child
+		{
+			margin-top:0px;
+		}
+		
+			.cpbs-main .cpbs-booking-extra-list>ul>li>div
+			{
+				
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li>div:first-child
+			{
+				flex-grow:1;
+			}
+		
+				.cpbs-main .cpbs-booking-extra-list>ul>li>div>.cpbs-button
+				{
+					display:block;
+					min-width:140px;
+				}
+			
+				.cpbs-main .cpbs-booking-extra-list>ul>li>div>.cpbs-button:after
+				{
+					padding-left:10px;
+					display:inlline-block;
+				}
+				
+			.cpbs-main .cpbs-booking-extra-list>ul>li>div:first-child+div
+			{
+				padding-left:30px;
+				padding-right:30px;
+				min-width:210px;
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li>div:first-child+div+div
+			{
+				
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-name,
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-price
+			{
+				margin-bottom:0px;
+				display:inline-block;
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-name+.cpbs-booking-extra-description,
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-price+.cpbs-booking-extra-description
+			{
+				margin-top:30px;
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-price
+			{
+				float:right;
+				margin-top:0px;
+				margin-right:50px;
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-price::before
+			{
+				content:"+";
+			}
+			
+			.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-description
+			{
+				padding:0px;
+				margin:0px;
+			}
+			
+/******************************************************************************/
+/* Booking complete                                                           */
+/******************************************************************************/
+
+.cpbs-main .cpbs-booking-complete
+{
+    text-align:center;
+    margin:200px auto 200px auto !important;
+}
+
+    .cpbs-main .cpbs-booking-complete .cpbs-meta-icon-tick
+    {
+        width:100px;
+        height:100px;
+        font-size:32px;
+        line-height:100px;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .cpbs-main .cpbs-booking-complete .cpbs-meta-icon-tick:before
+    {
+        z-index:3;
+        position:relative;
+    }
+        
+        .cpbs-main .cpbs-booking-complete .cpbs-meta-icon-tick>div
+        {
+            top:0px;
+            z-index:1;
+            width:100%;
+            height:100%;
+            border-width:2px;
+            position:absolute;
+            border-style:solid;
+            border-radius:999em;
+        }
+    
+        .cpbs-main .cpbs-booking-complete .cpbs-meta-icon-tick>div:first-child
+        {
+            left:0px;
+            z-index:2;
+        }
+        
+        .cpbs-main .cpbs-booking-complete .cpbs-meta-icon-tick>div:first-child+div
+        {
+            left:10px;
+        }
+    
+	.cpbs-main .cpbs-booking-complete h3
+	{
+		margin:0px;
+		padding:0px;
+        font-size:26px;
+        font-weight:400;
+        margin-top:30px;
+        line-height:37px;		
+	}
+		
+	.cpbs-main .cpbs-booking-complete .cpbs-booking-complete-payment 
+	{
+		
+	}
+	
+		.cpbs-main .cpbs-booking-complete .cpbs-booking-complete-payment>div
+		{
+			display:none;
+			font-size:18px;
+			font-weight:300;
+			line-height:30px;
+			padding-top:10px;  
+		}
+    
+			.cpbs-main .cpbs-booking-complete .cpbs-booking-complete-payment>div>span
+			{
+				font-weight:400;
+			}
+        
+			.cpbs-main .cpbs-booking-complete .cpbs-booking-complete-payment>div>a
+			{
+				margin-top:20px;
+				display:inline-block;
+			}
+
+.cpbs-main form[name="cpbs-form-stripe"]
+{
+    display:none !important;
+}
+
+/******************************************************************************/
+/* Location info frame	                                                      */
+/******************************************************************************/
+
+.cpbs-location-info-frame
+{
+    top:0px;
+    left:0px;
+    z-index:2;
+	display:none;
+	width:100%;
+	height:100%;
+    position:fixed;
+    background:rgba(51,54,57,0.4);	
+}
+
+.cpbs-location-info-frame.cpbs-state-open
+{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+	.cpbs-location-info-frame>div
+	{
+		margin:20px;
+		width:990px;
+		height:800px;
+		max-width:100%;
+		max-height:100%;
+		overflow:auto;
+		background:#FFFFFF;
+	}
+	
+		.cpbs-location-info-frame>div>*
+		{
+			position:relative;
+		}
+		
+		.cpbs-location-info-frame>div>*:first-child
+		{
+			z-index:2;
+		}
+		
+		/**********************************************************************/
+		/* Location info frame / Name                                         */
+		/**********************************************************************/	
+
+		.cpbs-location-info-frame>div .cpbs-location-info-frame-name
+		{
+			padding:40px 0px 30px 30px;
+		}
+				
+		.cpbs-main.cpbs-width-480 .cpbs-location-info-frame>div .cpbs-location-info-frame-name,
+		.cpbs-main.cpbs-width-300 .cpbs-location-info-frame>div .cpbs-location-info-frame-name
+		{
+			padding:30px;
+			margin-bottom:0px;
+		}
+
+		/**********************************************************************/
+		/* Location info frame / Place type                                   */
+		/**********************************************************************/	
+
+		.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type
+		{
+			height:100%;
+			overflow:hidden;
+			padding:50px 0px 0px 0px;
+		}
+		
+		.cpbs-main.cpbs-width-480 .cpbs-location-info-frame>div .cpbs-location-info-frame-place-type,
+		.cpbs-main.cpbs-width-300 .cpbs-location-info-frame>div .cpbs-location-info-frame-place-type
+		{
+			padding:50px 0px 0px 30px;
+		}
+		
+			.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type>.cpbs-list
+			{
+				margin:0px;
+				padding:0px;
+			}
+			
+				.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item
+				{
+					float:left;
+					display:block;
+					padding-right:30px;
+				}
+		
+					.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div
+					{
+						width:160px;
+						height:200px;
+						padding:30px;
+						display:flex;
+						flex-direction:column;
+						justify-content:space-between;
+					}
+					
+						.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div>span
+						{
+							display:block;
+						}
+					
+						.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div>span:before
+						{
+							color:#FFFFFF;
+							font-size:48px;
+						}
+						
+							.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div>div
+							{
+								
+							}
+							
+								.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div>div>span
+								{
+									color:#FFFFFF;
+									display:block;
+								}
+							
+								.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div>div>span:first-child
+								{
+									font-size:18px;
+									font-weight:600;
+									line-height:28px;
+								}
+								
+								.cpbs-location-info-frame>div .cpbs-location-info-frame-place-type .cpbs-list .cpbs-list-item>div>div>span:first-child+span
+								{
+									font-size:16px;
+									font-weight:400;
+									line-height:26px;
+								}								
+					
+		/**********************************************************************/
+		/* Location info frame / Image                                        */
+		/**********************************************************************/		
+
+		.cpbs-location-info-frame>div .cpbs-location-info-frame-image
+		{
+			top:-60px;
+			margin-bottom:-60px;
+		}
+		
+		/**********************************************************************/
+		/* Location info frame / Description                                  */
+		/**********************************************************************/		
+
+		.cpbs-location-info-frame>div .cpbs-location-info-frame-description
+		{
+			padding:40px 0px 40px 30px;
+		}	
+
+		/**********************************************************************/
+		/* Location info frame / Contact detail                               */
+		/**********************************************************************/		
+
+		.cpbs-location-info-frame>div .cpbs-location-info-frame-contact-detail
+		{
+			padding:40px 0px 40px 0px;
+		}	
+		
+		/**********************************************************************/
+		/* Location info frame / Business hour                               */
+		/**********************************************************************/		
+
+		.cpbs-location-info-frame>div .cpbs-location-info-frame-business-hour
+		{
+			padding:40px 0px 40px 0px;
+		}	
+
+		.cpbs-main.cpbs-width-480 .cpbs-location-info-frame>div .cpbs-location-info-frame-description,
+		.cpbs-main.cpbs-width-300 .cpbs-location-info-frame>div .cpbs-location-info-frame-description,
+		.cpbs-main.cpbs-width-480 .cpbs-location-info-frame>div .cpbs-location-info-frame-contact-detail,
+		.cpbs-main.cpbs-width-300 .cpbs-location-info-frame>div .cpbs-location-info-frame-contact-detail,
+		.cpbs-main.cpbs-width-480 .cpbs-location-info-frame>div .cpbs-location-info-frame-business-hour,
+		.cpbs-main.cpbs-width-300 .cpbs-location-info-frame>div .cpbs-location-info-frame-business-hour
+		{
+			margin-bottom:30px;
+			padding:30px 30px 0px 30px;
+		}
+		
+		.cpbs-main.cpbs-width-480 .cpbs-location-info-frame>div>div.cpbs-layout-50x25x25>div+div,
+		.cpbs-main.cpbs-width-300 .cpbs-location-info-frame>div>div.cpbs-layout-50x25x25>div+div
+		{
+			padding-top:0px;
+		}
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Responsive / Header                                                    */
+    /**************************************************************************/
+
+	.cpbs-main.cpbs-widthlt-960 .cpbs-header.cpbs-header-style-2
+	{
+		font-size: 28px;
+	}	
+	
+	.cpbs-main.cpbs-widthlt-960 .cpbs-header.cpbs-header-style-3
+	{
+		font-size:21px;
+	}
+
+    /**************************************************************************/
+    /* Responsive / Button                                                    */
+    /**************************************************************************/
+
+    .cpbs-main.cpbs-width-300 .cpbs-button.cpbs-button-style-1,
+    .cpbs-main.cpbs-width-300 .cpbs-button.cpbs-button-style-2,
+    .cpbs-main.cpbs-width-480 .cpbs-button.cpbs-button-style-1,
+    .cpbs-main.cpbs-width-480 .cpbs-button.cpbs-button-style-2
+    {
+        padding:10px 26px 12px 26px;
+    }
+    
+    .cpbs-main.cpbs-width-300 .cpbs-button-checkbox>a,
+    .cpbs-main.cpbs-width-480 .cpbs-button-checkbox>a
+    {
+        padding:13px 20px 14px 20px;
+    }
+    
+    .cpbs-main.cpbs-width-300 .cpbs-button.cpbs-button-step-prev,
+    .cpbs-main.cpbs-width-480 .cpbs-button.cpbs-button-step-prev
+    {
+        padding:10px 26px 12px 18px;
+    }
+    
+    .cpbs-main.cpbs-width-300 .cpbs-button.cpbs-button-step-next,
+    .cpbs-main.cpbs-width-480 .cpbs-button.cpbs-button-step-next
+    {
+        padding:10px 18px 12px 26px;
+    }
+
+    /**************************************************************************/
+    /* Responsive / Layout                                                    */
+    /**************************************************************************/
+    
+    .cpbs-main.cpbs-width-480 .cpbs-layout-50x50 .cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-50x50 .cpbs-layout-column-right,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-50x50 .cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-50x50 .cpbs-layout-column-right,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-25x75>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-25x75>.cpbs-layout-column-right,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-25x75>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-25x75>.cpbs-layout-column-right,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-33x33x33>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-33x33x33>.cpbs-layout-column-center,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-33x33x33>.cpbs-layout-column-right,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-33x33x33>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-33x33x33>.cpbs-layout-column-center,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-33x33x33>.cpbs-layout-column-right,
+	.cpbs-main.cpbs-width-480 .cpbs-layout-50x25x25>.cpbs-layout-column-left,
+	.cpbs-main.cpbs-width-480 .cpbs-layout-50x25x25>.cpbs-layout-column-center,
+	.cpbs-main.cpbs-width-480 .cpbs-layout-50x25x25>.cpbs-layout-column-right,
+	.cpbs-main.cpbs-width-300 .cpbs-layout-50x25x25>.cpbs-layout-column-left,
+	.cpbs-main.cpbs-width-300 .cpbs-layout-50x25x25>.cpbs-layout-column-center,
+	.cpbs-main.cpbs-width-300 .cpbs-layout-50x25x25>.cpbs-layout-column-right	
+    {
+        clear:both;
+        width:100%;
+        float:none;
+        margin-left:0px;
+        margin-right:0px;
+    }
+
+    .cpbs-main.cpbs-width-480 .cpbs-layout-25x75>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-25x75>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-50x50 .cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-50x50 .cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-33x33x33>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-33x33x33>.cpbs-layout-column-center,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-33x33x33>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-300 .cpbs-layout-33x33x33>.cpbs-layout-column-center,
+	.cpbs-main.cpbs-width-480 .cpbs-layout-50x25x25>.cpbs-layout-column-left,
+	.cpbs-main.cpbs-width-480 .cpbs-layout-50x25x25>.cpbs-layout-column-center,
+	.cpbs-main.cpbs-width-300 .cpbs-layout-50x25x25>.cpbs-layout-column-left,
+	.cpbs-main.cpbs-width-300 .cpbs-layout-50x25x25>.cpbs-layout-column-center
+    {
+        margin-bottom:40px;
+    }
+    
+    .cpbs-main.cpbs-width-300 .cpbs-layout-25x75,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-25x75
+    {
+        display:flex;
+        flex-direction:column-reverse;
+    }
+    
+    .cpbs-main.cpbs-width-300 .cpbs-layout-25x75>.cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-layout-25x75>.cpbs-layout-column-left
+    {
+        margin-top:40px;
+    }
+    
+    /**************************************************************************/
+    /* Responsive / Summary field                                             */
+    /**************************************************************************/
+
+    .cpbs-main.cpbs-width-300 .cpbs-attribute-field .cpbs-layout-50x50 .cpbs-layout-column-left,
+    .cpbs-main.cpbs-width-480 .cpbs-attribute-field .cpbs-layout-50x50 .cpbs-layout-column-left
+    {
+        margin-bottom:20px;
+    }
+    
+    /**************************************************************************/
+    /* Responsive / Main navigation                                           */
+    /**************************************************************************/
+
+    .cpbs-main.cpbs-width-300 .cpbs-main-navigation-default
+    {
+        display:none;
+    }
+
+    .cpbs-main.cpbs-width-300 .cpbs-main-navigation-responsive
+    {
+        display:block;
+    }
+        
+    /**************************************************************************/
+    /* Responsive / Step                                                      */
+    /**************************************************************************/
+
+	.cpbs-width-300.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div>div
+	{
+		flex-basis:200px;
+	}
+	
+	.cpbs-width-300.cpbs-main .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div>div>.cpbs-form-field+.cpbs-form-field
+	{
+		border-left-width:1px;
+	}
+	
+	.cpbs-width-300.cpbs-main.cpbs-google-map-enable-1 .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div
+	{
+		padding-top:10px;
+		padding-left:10px;
+		padding-bottom:10px;
+	}
+    
+	.cpbs-width-300.cpbs-main.cpbs-google-map-enable-1 .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>div>div
+	{
+		padding-right:10px;
+	}
+	
+	.cpbs-width-300.cpbs-main.cpbs-google-map-enable-1 .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div>input
+	{
+		margin:0px;
+		padding-right:10px;
+		padding-bottom:10px;
+		width:calc(100% - 10px);
+	}
+	
+	.cpbs-width-300.cpbs-main.cpbs-google-map-enable-1 .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child
+	{
+		padding:10px;
+	}
+	
+	.cpbs-width-300.cpbs-main.cpbs-booking-form-widget-mode .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child
+	{
+		padding-bottom:30px;
+	}
+	
+	.cpbs-width-300.cpbs-main.cpbs-booking-form-widget-mode .cpbs-main-content .cpbs-main-content-step-1 .cpbs-form-panel>div:first-child>div
+	{
+		padding-bottom:0px;
+	}
+	
+	
+    /**************************************************************************/
+    /* Responsive / Button navigation                                         */
+    /**************************************************************************/    
+    
+    .cpbs-main.cpbs-width-300 .cpbs-main-content-navigation-button
+    {
+        display:flex;
+        flex-direction:column;
+    }
+  
+        .cpbs-main.cpbs-width-300 .cpbs-main-content-navigation-button a
+        {
+            width:100%;
+            float:none;
+            text-align:center;
+        }
+
+        .cpbs-main.cpbs-width-300 .cpbs-main-content-navigation-button .cpbs-button.cpbs-button-step-prev
+        {
+            order:2;
+            margin-top:10px;
+        }
+
+        .cpbs-main.cpbs-width-300 .cpbs-main-content-navigation-button .cpbs-button.cpbs-button-step-next
+        {
+            order:1;
+            margin:10px 0px 0px 0px;
+        }
+		
+    /**************************************************************************/
+    /* Responsive / Place list	                                             */
+    /**************************************************************************/
+
+	.cpbs-width-300.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-top,
+	.cpbs-width-300.cpbs-main .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom
+	{
+		display:block;
+	}
+	
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-price
+	{
+		margin-bottom:0px;
+	}
+	
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-price,
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-attribute-1,
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-attribute-2,
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-select-button
+	{
+		margin-top:40px;
+	}	
+
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-attribute-2
+	{
+		margin-top:20px;
+	}
+	
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place .cpbs-place-name
+	{
+		margin-bottom:5px;
+	}
+	
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place .cpbs-place-attribute-1>div>div, 
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place .cpbs-place-attribute-2>div>div
+	{
+		padding-left:40px;
+	}
+
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place>.cpbs-place-layout-column-right
+	{
+		padding:15px 20px 20px 20px;
+	}
+	
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place
+	{
+		min-height:168px;
+	}
+
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place>.cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-bottom>div:first-child+div+div>.cpbs-button
+	{
+		min-width:120px;
+	}
+	
+	.cpbs-main.cpbs-widthlt-960 .cpbs-place .cpbs-place-image img
+	{
+		max-width:192px;
+	}
+	
+	.cpbs-main.cpbs-width-300 .cpbs-place
+	{
+		flex-direction:row-reverse;
+	}
+
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-price, 
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-attribute-1, 
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-attribute-2, 
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-select-button
+	{
+		margin-top: 10px;
+	}
+
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-price
+	{
+		margin-bottom:10px;
+	}
+
+	.cpbs-width-300.cpbs-main .cpbs-place .cpbs-place-attribute-2
+	{
+		margin-bottom:20px;
+	}
+
+	.cpbs-main.cpbs-width-300 .cpbs-place .cpbs-place-image img
+	{
+		width:90px;
+		position:absolute;
+		margin-left:-90px;
+		margin-top:25px;
+	}
+
+	.cpbs-main.cpbs-width-300 .cpbs-place > .cpbs-place-layout-column-right>.cpbs-place-layout-column-right-line-top>div:first-child
+	{
+		padding-right:90px;
+	}
+
+    /**************************************************************************/
+    /* Responsive / Booking extra                                             */
+    /**************************************************************************/
+
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li
+	{
+		height:100%;
+		overflow:hidden;
+		display:block;
+	}
+	
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li>div:first-child+div
+	{
+		min-width:0px;
+		padding-left:0px;
+	}
+	
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li>div:first-child+div,
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li>div:first-child+div+div
+	{
+		float:left;
+		display:block;
+		margin-top:30px;
+	}
+	
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-name,
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-price
+	{
+		display:block;
+	}
+	
+	.cpbs-widthlt-960.cpbs-main .cpbs-booking-extra-list>ul>li .cpbs-booking-extra-price
+	{
+		float:none;
+		margin:0px;
+		margin-top:10px;
+	}
+
+	.cpbs-main.cpbs-widthlt-960 .cpbs-booking-extra-list>ul>li
+	{
+		padding:15px 20px 20px 20px;
+	}
+
+	.cpbs-main.cpbs-widthlt-960 .cpbs-booking-extra-list>ul>li>div>.cpbs-button
+	{
+		min-width: 120px;
+	}
+
+    /**************************************************************************/
+    /* Responsive / Form field                                                */
+    /**************************************************************************/    
+    
+    .cpbs-main.cpbs-width-300 .cpbs-form-field.cpbs-form-field-width-50
+    {
+        width:100%;
+        float:none;
+    }
+
+    .cpbs-main.cpbs-width-300 .cpbs-form-field.cpbs-form-field-width-50+.cpbs-form-field.cpbs-form-field-width-50
+    {
+        border-left-width:1px;
+    }
+    
+    .cpbs-width-300.cpbs-main .cpbs-form-field-width-33,
+    .cpbs-width-300.cpbs-main .cpbs-form-field-width-33+.cpbs-form-field-width-33,
+    .cpbs-width-300.cpbs-main .cpbs-form-field-width-33+.cpbs-form-field-width-33+.cpbs-form-field-width-33
+    {
+        width:100%;
+        float:none;
+        border-left-width:1px;
+    }
+    
+@media screen and (max-width:460px)
+{
+    .cpbs-main.ui-datepicker
+    {
+        padding:15px 10px 15px 10px;
+    }
+
+    .cpbs-main.ui-datepicker td a, 
+    .cpbs-main.ui-datepicker td span
+    {
+        width:34px;
+        height:34px;
+        line-height:34px;
+    }
+
+    .cpbs-main.ui-datepicker td a.ui-state-hover
+    {
+        line-height:30px
+    }
+
+    .cpbs-main.ui-datepicker td,
+    .cpbs-main.ui-datepicker td a 
+    {
+        font-size:14px;
+    }
+
+    .cpbs-main.ui-datepicker .ui-datepicker-title 
+    {
+        font-size:14px;
+    }
+
+    .cpbs-main.ui-datepicker .ui-datepicker-next, 
+    .cpbs-main.ui-datepicker .ui-datepicker-next-hover 
+    {
+        margin-right:0px;
+    }
+
+    .cpbs-main.ui-datepicker .ui-datepicker-prev,
+    .cpbs-main.ui-datepicker .ui-datepicker-prev-hover
+    {
+        margin-left:0px;
+    }
+
+    .cpbs-main.ui-datepicker .ui-datepicker-header 
+    {
+        padding:0.7em 0px;
+    }  
+}
+
+/******************************************************************************/
+/* WooCommerce                                                                */
+/******************************************************************************/
+
+html .cpbs-main #payment
+{
+    border-radius:0px;
+}
+
+html .cpbs-main #payment,
+html .cpbs-main #payment .form-row
+{
+    background:none;
+}
+
+html .cpbs-main #payment .form-row
+{
+    padding:0px;
+    padding-top:20px;
+}
+
+html .cpbs-main #payment .wc_payment_methods
+{
+    border:none;
+    background-color:#F9F9F9;
+    padding:28px 20px 28px 20px;
+}
+
+    html .cpbs-main #payment .wc_payment_methods .wc_payment_method
+    {
+        
+    }
+
+		html .cpbs-main #payment .wc_payment_methods .wc_payment_method label,
+		html .cpbs-main #payment .wc_payment_methods .wc_payment_method input[type="radio"]
+		{
+			cursor:pointer;
+		}
+    
+        html .cpbs-main #payment .wc_payment_methods .wc_payment_method label
+        {
+			margin:0px;
+			cursor:pointer;
+			font-size:16px;
+			text-transform:none;
+			display:inline-block;            
+        }
+    
+            html .cpbs-main #payment .wc_payment_methods .wc_payment_method label a,
+            html .cpbs-main #payment .wc_payment_methods .wc_payment_method label img
+            {
+                display:none;
+            }
+
+        html .cpbs-main #payment .wc_payment_methods .wc_payment_method .payment_box
+        {
+            margin:0px;
+            border:none;
+            padding:0px;
+            position:static;
+            background:none;
+            padding-left:30px;
+        }
+
+        html .cpbs-main #payment .payment_box::before
+        {
+            border:none;
+        }
+
+            html .cpbs-main #payment .payment_box p
+            {
+                opacity:0.5;
+                margin-top:0px;
+                padding-top:5px;
+				font-size:16px;
+            }
+            
+html .cpbs-main .woocommerce-notice
+{
+    margin:0px;
+	border:none;
+    padding:10px;
+    font-size:16px;
+    font-weight:500;
+}
+
+/******************************************************************************/
+/* Bug fixes                                                                  */
+/******************************************************************************/
+
+#ui-datepicker-div,
+.cpbs-main .ui-selectmenu-menu,
+.cpbs-main .ui-timepicker-wrapper
+{
+    z-index:99999 !important;
+}
+
+.gmnoprint
+{
+    font-size:14px !important;
+    font-weight:400 !important;
+    font-family:Lato !important;
+}
+
+.gm-style
+{
+    font:400 14px Lato !important;
+}

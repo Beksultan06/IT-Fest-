@@ -1,0 +1,40 @@
+.elementor-2864 .elementor-element.elementor-element-fcc177f {
+    padding: 110px 0px 105px 0px;
+}
+
+.elementor-2864 .elementor-element.elementor-element-f940c92 {
+    padding: 0px 0px 40px 0px;
+}
+
+.elementor-2864 .elementor-element.elementor-element-a3a2f3b>.elementor-element-populated {
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-2864 .elementor-element.elementor-element-7f63897 {
+    text-align: center;
+}
+
+.elementor-2864 .elementor-element.elementor-element-7f63897 .elementor-heading-title {
+    font-size: 52px;
+    line-height: 62px;
+}
+
+.elementor-2864 .elementor-element.elementor-element-b083b46 {
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-2864 .elementor-element.elementor-element-8575685>.elementor-element-populated {
+    padding: 0px 0px 0px 0px;
+}
+
+@media(max-width:1024px) {
+    .elementor-2864 .elementor-element.elementor-element-fcc177f {
+        padding: 70px 0px 50px 0px;
+    }
+}
+
+@media(max-width:767px) {
+    .elementor-2864 .elementor-element.elementor-element-7f63897 .elementor-heading-title {
+        font-size: 44px;
+    }
+}

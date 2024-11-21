@@ -1,0 +1,81 @@
+.elementor-792 .elementor-element.elementor-element-29d672e8 {
+    padding: 60px 0px 20px 0px;
+}
+
+.elementor-792 .elementor-element.elementor-element-14363396 {
+    margin-top: -10px;
+    margin-bottom: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-792 .elementor-element.elementor-element-4aeb2909>.elementor-element-populated {
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: #7A7A7A47;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 48px 50px 40px 0px;
+}
+
+.elementor-792 .elementor-element.elementor-element-4aeb2909>.elementor-element-populated>.elementor-background-overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-792 .elementor-element.elementor-element-39838d0c .elementor-progress-bar {
+    height: 7px;
+    line-height: 7px;
+}
+
+.elementor-792 .elementor-element.elementor-element-15b8cfd3 .elementor-progress-bar {
+    height: 7px;
+    line-height: 7px;
+}
+
+.elementor-792 .elementor-element.elementor-element-15b8cfd3>.elementor-widget-container {
+    padding: 5px 0px 0px 0px;
+}
+
+.elementor-792 .elementor-element.elementor-element-337c0058 .elementor-progress-bar {
+    height: 7px;
+    line-height: 7px;
+}
+
+.elementor-792 .elementor-element.elementor-element-337c0058>.elementor-widget-container {
+    padding: 5px 0px 0px 0px;
+}
+
+.elementor-792 .elementor-element.elementor-element-15868e9b>.elementor-element-populated {
+    padding: 40px 0px 40px 50px;
+}
+
+.elementor-792 .elementor-element.elementor-element-f3cbffe .prt-heading-subheading {
+    text-align: left;
+}
+
+.elementor-792 .elementor-element.elementor-element-1daff148 .prt-heading-subheading {
+    text-align: left;
+}
+
+@media(max-width:1024px) and (min-width:768px) {
+    .elementor-792 .elementor-element.elementor-element-4aeb2909 {
+        width: 100%;
+    }
+
+    .elementor-792 .elementor-element.elementor-element-15868e9b {
+        width: 100%;
+    }
+}
+
+@media(max-width:1024px) {
+    .elementor-792 .elementor-element.elementor-element-29d672e8 {
+        padding: 30px 0px 20px 0px;
+    }
+
+    .elementor-792 .elementor-element.elementor-element-4aeb2909>.elementor-element-populated {
+        border-width: 0px 0px 0px 0px;
+        padding: 10px 0px 0px 0px;
+    }
+
+    .elementor-792 .elementor-element.elementor-element-15868e9b>.elementor-element-populated {
+        padding: 30px 0px 0px 0px;
+    }
+}
