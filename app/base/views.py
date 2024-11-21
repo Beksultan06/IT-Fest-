@@ -44,3 +44,6 @@ def about(request):
     about_id = About.objects.latest("id")
     about_all = Services.objects.all()
     return render(request, 'about/index.html', locals())
+
+def book(request):
+    return render(request, 'booking-payments/index.html', locals())
