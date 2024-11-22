@@ -1,7 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
-from app.base.constant import LIST
+from app.base.constant import PARKING
 # Create your models here.
 class Contact(models.Model):
     name = models.CharField(
@@ -138,3 +138,91 @@ class Choices(models.Model):
     class Meta:
         verbose_name_plural = 'Зачем нужно выбрать нас'
 
+class TypeCar(models.Model):
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка'
+    )
+    descriptions = RichTextField(
+        verbose_name='Описание'
+    )
+    parking_space = models.CharField(
+        max_length=155,
+        verbose_name='Парковочное место'
+    )
+    parking_availble = models.CharField(
+        max_length=155,
+        verbose_name='Доступные места'
+    )
+    price = models.CharField(
+        max_length=155,
+        verbose_name='Цена'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Типы Транспорта'
+
+class AddOptions(models.Model):
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка'
+    )
+    descriptions = RichTextField(
+        verbose_name='Описание'
+    )
+    price = models.CharField(
+        max_length=155,
+        verbose_name='Цена'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Дополнительные опции'
+
+    
+class Book(models.Model):
+    entry_date = models.DateTimeField(
+        verbose_name='Дата входа'
+    )
+    entry_time = models.TimeField(
+        verbose_name='Время входа'
+    )
+    select_parking = models.CharField(
+        max_length=155,
+        verbose_name='Выбрать парковку'
+    )
+    first_name = models.CharField(
+        max_length=155,
+        verbose_name='Имя'
+    )
+    last_name = models.CharField(
+        max_length=155,
+        verbose_name='Фамилия'
+    )
+    email = models.EmailField(
+        verbose_name='Почта'
+    )
+    number = models.CharField(
+        max_length=25,
+        verbose_name='Номер телефона'
+    )
+    comments = models.TextField(
+        verbose_name='Комментарий',
+        null=True, blank=True
+    )
+    discount_code = models.CharField(
+        max_length=155,
+        verbose_name='Код скидки',
+        blank=True, null=True
+    )
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} ({self.select_parking})"
+
+    class Meta:
+        verbose_name_plural = 'Бронирования'
