@@ -55,7 +55,7 @@ def book(request):
         try:
             entry_datetime = request.POST.get('cpbs_entry_date')
             exit_datetime = request.POST.get('cpbs_exit_date')
-            entry_time = request.POST.get('cpbs_entry_time')  # Время входа
+            entry_time = request.POST.get('cpbs_entry_time')
 
             if not entry_datetime or not exit_datetime or not entry_time:
                 return HttpResponse("Ошибка: Все поля даты и времени должны быть заполнены.", status=400)
@@ -73,7 +73,7 @@ def book(request):
 
             Book.objects.create(
                 entry_date=entry_datetime,
-                entry_time=entry_datetime.time(),  # Время из entry_datetime
+                entry_time=entry_datetime.time(),
                 select_parking=select_parking,
                 first_name=first_name,
                 last_name=last_name,
@@ -96,7 +96,6 @@ def services(request):
         service_id = ServicesPage.objects.latest("id")
     except ServicesPage.DoesNotExist:
         return HttpResponse("Данных нет.", status=404)
-
     return render(request, "services-1/index.html", locals())
 
 def services_dop(request):

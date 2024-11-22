@@ -144,11 +144,11 @@ MEDIA_ROOT = BASE_DIR/ 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.example.com'
+EMAIL_HOST = 'smtp.gmail.com'  # Нужно заменить 'smtp.example.com' на реальный SMTP-сервер
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'nurlanuuulubeksultan@gmail.com'
-EMAIL_HOST_PASSWORD = 'ytlhynvmpifetqdk'
+EMAIL_HOST_PASSWORD = 'kkadntzrneeuvygs'  # Это ваш уникальный пароль приложения Google
 
 
 # redis

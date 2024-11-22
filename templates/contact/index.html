@@ -6648,121 +6648,15 @@
 																								</p>
 																								<ul></ul>
 																							</div>
-																							<form method="post" action="{% url 'index' %}">
+																							<form method="post" action="{% url 'contact' %}">
 																								{% csrf_token %}
-																								<div
-																									class="prt-commonform prt-contactform-01">
-																									<div class="row">
-																										<div
-																											class="col-md-6">
-																											<p><span class="wpcf7-form-control-wrap"
-																													data-name="your-name"><input
-																														size="40"
-																														maxlength="400"
-																														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																														aria-required="true"
-																														aria-invalid="false"
-																														placeholder="Имя"
-																														value=""
-																														type="text"
-																														name="name" /></span>
-																											</p>
-																										</div>
-																										<div
-																											class="col-md-6">
-																											<p><span class="wpcf7-form-control-wrap"
-																													data-name="your-name"><input
-																														size="40"
-																														maxlength="400"
-																														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																														aria-required="true"
-																														aria-invalid="false"
-																														placeholder="Номер телефона"
-																														value=""
-																														type="text"
-																														name="phone" /></span>
-																											</p>
-																										</div>
-																									</div>
-																									<div class="row">
-																										<div
-																											class="col-md-6">
-																											<p><span class="wpcf7-form-control-wrap"
-																													data-name="your-email"><input
-																														size="40"
-																														maxlength="400"
-																														class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-																														aria-required="true"
-																														aria-invalid="false"
-																														placeholder="Почта"
-																														value=""
-																														type="email"
-																														name="email" /></span>
-																											</p>
-																										</div>
-																										<div
-																											class="col-md-6">
-																											<p><span class="wpcf7-form-control-wrap"
-																													data-name="your-name"><input
-																														size="40"
-																														maxlength="400"
-																														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																														aria-required="true"
-																														aria-invalid="false"
-																														placeholder="почтовый индекс"
-																														value=""
-																														type="text"
-																														name="zipcode" /></span>
-																											</p>
-																										</div>
-																									</div>
-																									<div class="row">
-																										<div
-																											class="col-md-12">
-																											<p><span class="wpcf7-form-control-wrap"
-																													data-name="your-name"><input
-																														size="40"
-																														maxlength="400"
-																														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																														aria-required="true"
-																														aria-invalid="false"
-																														placeholder="Услуги"
-																														value=""
-																														type="text"
-																														name="services" /></span>
-																											</p>
-																										</div>
-																										<div
-																											class="col-md-12">
-																											<p><span class="wpcf7-form-control-wrap"
-																													data-name="your-message"><textarea
-																														cols="20"
-																														rows="1"
-																														maxlength="2000"
-																														class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
-																														aria-required="true"
-																														aria-invalid="false"
-																														placeholder="Описание необходимых работ или услуг"
-																														name="message"></textarea></span>
-																											</p>
-																										</div>
-																									</div>
-																									<div
-																										class="prt-contact-btn prt-btn-color-darkgrey prt-btn-shape-square elementor-widget elementor-widget-button">
-																										<p>
-																											<input
-																											id="modal"
-																											href="{% url 'index' %}"
-																												type="submit"
-																												value="Отправить"
-																												class="wpcf7-form-control wpcf7-submit elementor-button-link elementor-button elementor-size-md" /><span
-																												class="ajax-loader"></span>
-																										</p>
-																									</div>
-																								</div>
-																								<div class="wpcf7-response-output"
-																									aria-hidden="true">
-																								</div>
+																								<input type="text" name="name" placeholder="Имя" required />
+																								<input type="text" name="phone" placeholder="Телефон" required />
+																								<input type="email" name="email" placeholder="Email" required />
+																								<input type="text" name="zipcode" placeholder="Почтовый индекс" required />
+																								<input type="text" name="services" placeholder="Услуги" required />
+																								<textarea name="message" placeholder="Сообщение" required></textarea>
+																								<button type="submit">Отправить</button>
 																							</form>
 																						</div>
 																					</div>
@@ -6997,52 +6891,37 @@
 			}
 		}; /* ]]> */
 	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const submitButton = document.querySelector("#modal");
-    const responseOutput = document.querySelector(".wpcf7-response-output");
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-    // Функция для проверки обязательных полей
-    function validateForm(event) {
-        event.preventDefault(); // Останавливаем отправку формы по умолчанию
+    const form = event.target;
+    const formData = new FormData(form);
 
-        // Очищаем вывод ошибок
-        responseOutput.textContent = "";
-        responseOutput.classList.remove("error");
-        responseOutput.classList.remove("success");
-
-        let isValid = true;
-        const requiredFields = form.querySelectorAll("[aria-required='true']");
-
-        // Проверяем каждое обязательное поле
-        requiredFields.forEach((field) => {
-            if (!field.value.trim()) {
-                isValid = false;
-                field.classList.add("error");
-            } else {
-                field.classList.remove("error");
-            }
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-CSRFToken": document.querySelector("[name=csrfmiddlewaretoken]").value,
+            },
         });
 
-        // Если форма валидна, отправляем её
-        if (isValid) {
-            responseOutput.textContent = "Форма отправлена успешно!";
-            responseOutput.classList.add("success");
-            form.submit(); // Отправляем форму
+        if (response.ok) {
+            const data = await response.json();
+            alert(data.message); // Сообщение об успешной отправке
+            form.reset(); // Сброс формы
         } else {
-            responseOutput.textContent = "Пожалуйста, заполните все обязательные поля.";
-            responseOutput.classList.add("error");
+            const errorData = await response.json();
+            alert(`Ошибка: ${errorData.message}`);
         }
-    }
-
-    // Обработчик события отправки формы
-    if (submitButton) {
-        submitButton.addEventListener("click", validateForm);
+    } catch (error) {
+        console.error("Ошибка при отправке формы:", error);
+        alert("Произошла ошибка при отправке.");
     }
 });
+</script>
 
-		</script>
 	<script>
 		const lazyloadRunObserver = () => {
 			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
@@ -7075,14 +6954,14 @@
 		href='//fonts.googleapis.com/css?family=Prompt%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSyne%3A600%7CPoppins%3A400%7CTeko%3A600'
 		media='all' />
 	<link rel='stylesheet' id='rs-plugin-settings-css'
-		href='//valetex.preyantechnosys.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.18'
+		href='//valetex.preyantechnosys.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css'
 		media='all' />
 	<style id='rs-plugin-settings-inline-css'>
 		#rs-demo-id {}
 	</style>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/dist/hooks.min.js"
 		id="wp-hooks-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/dist/i18n.min.js"
 		id="wp-i18n-js"></script>
 	<script id="wp-i18n-js-after">
 		/* <![CDATA[ */
@@ -7091,7 +6970,7 @@
 		});
 		/* ]]> */
 	</script>
-	<script src="https://valetex.preyantechnosys.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.0"
+	<script src="https://valetex.preyantechnosys.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js"
 		id="swv-js"></script>
 	<script id="contact-form-7-js-before">
 		/* <![CDATA[ */
@@ -7103,52 +6982,52 @@
 		};
 		/* ]]> */
 	</script>
-	<script src="https://valetex.preyantechnosys.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.0"
+	<script src="https://valetex.preyantechnosys.com/wp-content/plugins/contact-form-7/includes/js/index.js"
 		id="contact-form-7-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/js/jquery.datetimepicker.full.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/js/jquery.datetimepicker.full.min.js"
 		id="walcf7-datepicker-js-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/js/datetimepicker.js?ver=1.0.0"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/js/datetimepicker.js"
 		id="walcf7-datepicker-js"></script>
-	<script src="//valetex.preyantechnosys.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.18"
+	<script src="//valetex.preyantechnosys.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js"
 		defer async id="tp-tools-js"></script>
-	<script src="//valetex.preyantechnosys.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.18" defer
+	<script src="//valetex.preyantechnosys.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js" defer
 		async id="revmin-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/perfect-scrollbar/perfect-scrollbar.jquery.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/perfect-scrollbar/perfect-scrollbar.jquery.min.js"
 		id="perfect-scrollbar-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/select2/select2.min.js?ver=6.6.2"
+	<script src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/select2/select2.min.js"
 		id="select2-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/isotope/isotope.pkgd.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/isotope/isotope.pkgd.min.js"
 		id="isotope-pkgd-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/jquery-mousewheel/jquery.mousewheel.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/jquery-mousewheel/jquery.mousewheel.min.js"
 		id="jquery-mousewheel-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/flexslider/jquery.flexslider-min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/flexslider/jquery.flexslider-min.js"
 		id="jquery-flexslider-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/sticky-kit/jquery.sticky-kit.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/sticky-kit/jquery.sticky-kit.min.js"
 		id="jquery-sticky-kit-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/slick/slick.min.js?ver=6.6.2"
+	<script src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/slick/slick.min.js"
 		id="slick-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/datecounter/timecircles.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/datecounter/timecircles.js"
 		id="timecircles-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/prettyphoto/js/jquery.prettyPhoto.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/prettyphoto/js/jquery.prettyPhoto.js"
 		id="prettyphoto-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/core.min.js"
 		id="jquery-ui-core-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.3"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/tabs.min.js"
 		id="jquery-ui-tabs-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.3"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/menu.min.js"
 		id="jquery-ui-menu-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/selectmenu.min.js?ver=1.13.3"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/selectmenu.min.js"
 		id="jquery-ui-selectmenu-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3"
+	<script src="https://valetex.preyantechnosys.com/wp-includes/js/jquery/ui/datepicker.min.js"
 		id="jquery-ui-datepicker-js"></script>
 	<script id="jquery-ui-datepicker-js-after">
 		/* <![CDATA[ */
@@ -7175,54 +7054,54 @@
 		/* ]]> */
 	</script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.actual.min.js?ver=1407"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.actual.min.js"
 		id="jquery-actual-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.timepicker.min.js?ver=592"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.timepicker.min.js"
 		id="jquery-timepicker-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.qtip.min.js?ver=9389"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.qtip.min.js"
 		id="jquery-qtip-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/ResizeSensor.min.js?ver=5198"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/ResizeSensor.min.js"
 		id="resizesensor-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.theia-sticky-sidebar.min.js?ver=9497"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.theia-sticky-sidebar.min.js]"
 		id="jquery-theia-sticky-sidebar-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.scrollTo.min.js?ver=7285"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.scrollTo.min.js"
 		id="jquery-scrollTo-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/slick.js?ver=2938"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/slick.js"
 		id="jquery-slick-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/CPBSHelper.js?ver=1333"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/CPBSHelper.js"
 		id="cpbs-helper-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.CPBSBookingForm.js?ver=9480"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/car-park-booking-system/script/jquery.CPBSBookingForm.js"
 		id="cpbs-booking-form-js"></script>
 	<script
 		src="//maps.google.com/maps/api/js?key=AIzaSyBbirJwPaIOXhzDNUTmcm8IwMP3ABIsMgM&amp;libraries=places%2Cdrawing&amp;ver=4988"
 		id="google-map-js"></script>
-	<script src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/js/functions.js?ver=1.0"
+	<script src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/js/functions.js"
 		id="valetex-functions-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/waypoints/jquery.waypoints.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/waypoints/jquery.waypoints.min.js"
 		id="waypoints-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/numinate/numinate.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/numinate/numinate.min.js"
 		id="numinate-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/jquery-circle-progress/circle-progress.min.js?ver=6.6.2"
+		src="https://valetex.preyantechnosys.com/wp-content/themes/valetex/assets/jquery-circle-progress/circle-progress.min.js"
 		id="jquery-circle-progress-js"></script>
 	<script defer
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.0"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js"
 		id="mc4wp-forms-api-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.24.7"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"
 		id="elementor-webpack-runtime-js"></script>
 	<script
-		src="https://valetex.preyantechnosys.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.24.7"
+		src="https://valetex.preyantechnosys.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"
 		id="elementor-frontend-modules-js"></script>
 	<script id="elementor-frontend-js-before">
 		/* <![CDATA[ */
@@ -7354,16 +7233,8 @@
 		};
 		/* ]]> */
 	</script>
-	<script src="https://valetex.preyantechnosys.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.24.7"
+	<script src="https://valetex.preyantechnosys.com/wp-content/plugins/elementor/assets/js/frontend.min.js"
 		id="elementor-frontend-js"></script>
-
-
-
-<script src="./main.js"></script>
-
-
-
-
 </body>
 
 </html>
