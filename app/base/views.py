@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 
 from app.base.utils import send_contact_email
-from .models import  About, Services, Base, Landlord, Choices, Book
+from .models import  About, Services, Base, Landlord, Choices, Book, ServicesPage, Solutions
 from datetime import datetime
 
 def index(request):
@@ -50,20 +50,16 @@ def about(request):
 def book(request):
     if request.method == "POST":
         try:
-            # Получаем данные из формы
             entry_datetime = request.POST.get('cpbs_entry_date')
             exit_datetime = request.POST.get('cpbs_exit_date')
             entry_time = request.POST.get('cpbs_entry_time')  # Время входа
 
-            # Проверяем, что поля заполнены
             if not entry_datetime or not exit_datetime or not entry_time:
                 return HttpResponse("Ошибка: Все поля даты и времени должны быть заполнены.", status=400)
 
-            # Преобразуем строки в формат datetime и time
             entry_datetime = datetime.strptime(entry_datetime, "%Y-%m-%dT%H:%M")
             exit_datetime = datetime.strptime(exit_datetime, "%Y-%m-%dT%H:%M")
 
-            # Получаем другие данные
             select_parking = request.POST.get('cpbs_location_id', 'Не выбрано')
             first_name = request.POST.get('first_name', 'Не указано')
             last_name = request.POST.get('last_name', 'Не указано')
@@ -72,7 +68,6 @@ def book(request):
             comments = request.POST.get('comments', '')
             discount_code = request.POST.get('discount_code', '')
 
-            # Сохраняем данные в модель Book
             Book.objects.create(
                 entry_date=entry_datetime,
                 entry_time=entry_datetime.time(),  # Время из entry_datetime
@@ -85,11 +80,23 @@ def book(request):
                 discount_code=discount_code
             )
 
-            # Перенаправление на страницу подтверждения
             return redirect('index')
 
         except ValueError as e:
-            # Обработка ошибок преобразования даты и времени
             return HttpResponse(f"Ошибка: {e}", status=400)
 
     return render(request, 'booking-payments/index.html')
+
+
+def services(request):
+    try:
+        service_id = ServicesPage.objects.latest("id")
+    except ServicesPage.DoesNotExist:
+        return HttpResponse("Данных нет.", status=404)
+
+    return render(request, "services-1/index.html", locals())
+
+def services_dop(request):
+    choices_all = Choices.objects.all()
+    service = Solutions.objects.latest("id")
+    return render(request, 'services-2/index.html', locals())

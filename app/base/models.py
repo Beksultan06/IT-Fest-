@@ -184,7 +184,7 @@ class AddOptions(models.Model):
     class Meta:
         verbose_name_plural = 'Дополнительные опции'
 
-    
+
 class Book(models.Model):
     entry_date = models.DateTimeField(
         verbose_name='Дата входа'
@@ -226,3 +226,53 @@ class Book(models.Model):
 
     class Meta:
         verbose_name_plural = 'Бронирования'
+
+
+#############################################################
+
+class ServicesPage(models.Model):
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка'
+    )
+    descriptions = RichTextField(
+        verbose_name='Описание'
+    )
+    title_choices = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка выбора'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Наши Услуги'
+
+#################################################################
+
+class Solutions(models.Model):
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка'
+    )
+    descriptions = RichTextField(
+        verbose_name='Описание'
+    )
+    title_car = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка машины'
+    )
+    descriptions_car = RichTextField(
+        verbose_name='Описание машины'
+    )
+    title_service = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка Услуги'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Наши решение'
