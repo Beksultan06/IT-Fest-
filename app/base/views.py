@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 
@@ -22,6 +22,8 @@ def contact(request):
         services = request.POST.get('services')
         message = request.POST.get('message')
 
+        print(name, phone, email, zip_code, services, message)
+
         send_mail(
             'Cheff Contact',
             f"""Здравствуйте.
@@ -39,6 +41,7 @@ def contact(request):
             ["nurlanuuulubeksultan@gmail.com"]
         )
         send_contact_email.delay(name, phone, email, zip_code, services, message)
+        return JsonResponse({"success": True, "message": "Ваше сообщение успешно отправлено."})
     return render(request, 'contact/index.html', locals())
 
 
